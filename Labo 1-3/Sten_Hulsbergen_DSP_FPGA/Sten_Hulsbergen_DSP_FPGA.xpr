@@ -3,7 +3,11 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
+<<<<<<< HEAD
 <Project Version="7" Minor="60" Path="/home/sten/Desktop/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.xpr">
+=======
+<Project Version="7" Minor="60" Path="/media/sten/Seagate-1TB/_School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.xpr">
+>>>>>>> e21ec537bc281d4a58b6a5b451f4789804f1c7f3
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="ff56c5444dc5400691f4d95983b8940a"/>
@@ -176,6 +180,14 @@
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
       <Filter Type="Utils"/>
+      <File Path="$PPRDIR/../../../../../../../../../home/sten/D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/synth_1/main.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedInSteps" Val="synth_1"/>
+          <Attr Name="AutoDcp" Val="1"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
@@ -216,7 +228,20 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="19">
+<<<<<<< HEAD
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/synth_1" AutoRQSDir="$PPRDIR/../../../../D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/synth_1">
+=======
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PPRDIR/../../../../../../../../../home/sten/D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/synth_1/main.dcp" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../../../home/sten/D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/synth_1" AutoRQSDir="$PPRDIR/../../../../../../../../../home/sten/D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="MMCM_synth_1" Type="Ft3:Synth" SrcSet="MMCM" Part="xc7a35tcpg236-1" ConstrsSet="MMCM" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/MMCM_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../../../home/sten/D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/MMCM_synth_1" AutoRQSDir="$PPRDIR/../../../../../../../../../home/sten/D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/MMCM_synth_1">
+>>>>>>> e21ec537bc281d4a58b6a5b451f4789804f1c7f3
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
@@ -226,6 +251,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+<<<<<<< HEAD
     <Run Id="MMCM_synth_1" Type="Ft3:Synth" SrcSet="MMCM" Part="xc7a35tcpg236-1" ConstrsSet="MMCM" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/MMCM_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/MMCM_synth_1" AutoRQSDir="$PPRDIR/../../../../D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/MMCM_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
@@ -237,6 +263,9 @@
       <RQSFiles/>
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/impl_1" AutoRQSDir="$PPRDIR/../../../../D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/impl_1">
+=======
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../../home/sten/D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/impl_1" AutoRQSDir="$PPRDIR/../../../../../../../../../home/sten/D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/impl_1">
+>>>>>>> e21ec537bc281d4a58b6a5b451f4789804f1c7f3
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
@@ -253,7 +282,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+<<<<<<< HEAD
     <Run Id="MMCM_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="MMCM" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="MMCM_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/MMCM_impl_1" AutoRQSDir="$PPRDIR/../../../../D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/MMCM_impl_1">
+=======
+    <Run Id="MMCM_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="MMCM" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="MMCM_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../../home/sten/D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/MMCM_impl_1" AutoRQSDir="$PPRDIR/../../../../../../../../../home/sten/D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 1-3/Sten_Hulsbergen_DSP_FPGA/Sten_Hulsbergen_DSP_FPGA.srcs/utils_1/imports/MMCM_impl_1">
+>>>>>>> e21ec537bc281d4a58b6a5b451f4789804f1c7f3
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
