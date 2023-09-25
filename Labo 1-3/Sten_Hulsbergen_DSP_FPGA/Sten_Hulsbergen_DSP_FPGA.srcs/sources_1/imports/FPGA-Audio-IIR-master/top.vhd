@@ -81,14 +81,23 @@ end process;
 
 
 
-pll:    main_pll
+--pll:    main_pll
+--port map(
+
+--   REFERENCECLK => clk_100mhz,
+--      RESET => reset,
+--      PLLOUTCORE => open,
+--      PLLOUTGLOBAL => clk,
+--      LOCK=> open
+--);
+
+pll:    MMCM
 port map(
 
-   REFERENCECLK => clk_100mhz,
-      RESET => reset,
-      PLLOUTCORE => open,
-      PLLOUTGLOBAL => clk,
-      LOCK=> open
+    clk_in1 => clk_100mhz ,
+    clk_out1 => clk,
+    reset => reset,
+    locked => open
 );
 
 audiomodule : audiosystem
