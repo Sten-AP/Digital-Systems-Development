@@ -7,9 +7,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
 
 
-entity main is
+entity main_pll is
     port (
-    clk_16mhz : in std_logic;
+    clk_100mhz : in std_logic;
 	
     i2s_mclk_adc : out std_logic;
     i2s_bclk_adc : out std_logic;
@@ -21,26 +21,21 @@ entity main is
     i2s_lr_dac : out std_logic;
 	i2s_dout : out std_logic
     );
+end main_pll;
 
-    
-
-end main;
-
-architecture Behavioral of main is
+architecture Behavioral of main_pll is
 
 signal clk : std_logic;
-signal pllsreset: std_logic := '0';
+signal reset: std_logic := '0';
 
-component main_pll is
+component clk_wiz_0
 port(
-      REFERENCECLK: in std_logic;
-      RESET: in std_logic;
-      PLLOUTCORE: out std_logic;
-      PLLOUTGLOBAL: out std_logic;
-      LOCK: out std_logic
+      clk_in1: in std_logic;
+      reset: in std_logic;
+      clk_out1: out std_logic;
+      locked: out std_logic
     );
 end component;
-
 
 component audiosystem is 
 port(
@@ -55,31 +50,24 @@ port(
     i2s_bclk_dac : out std_logic;
     i2s_lr_dac : out std_logic;
 	i2s_dout : out std_logic
-        
-  
     );
 end component;
 
 begin
-
 -- generatore low-to-high transition for PLL reset input
-process (clk_16mhz)
+process (clk_100mhz)
 begin
-	if (rising_edge(clk_16mhz)) then
-		pllsreset <= '1';
+	if (rising_edge(clk_100mhz)) then
+		reset <= '0';
 	end if;
 end process;
 
-
-
-pll:    main_pll
+MCMM : clk_wiz_0
 port map(
-
-   REFERENCECLK => clk_16mhz,
-      RESET => pllsreset,
-      PLLOUTCORE => open,
-      PLLOUTGLOBAL => clk,
-      LOCK=> open
+   clk_in1 => clk_100mhz,
+   reset => reset,
+   clk_out1 => clk,
+   locked => open
 );
 
 audiomodule : audiosystem

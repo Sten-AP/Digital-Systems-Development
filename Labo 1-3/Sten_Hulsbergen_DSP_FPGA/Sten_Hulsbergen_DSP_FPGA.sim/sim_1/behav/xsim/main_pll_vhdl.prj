@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../FPGA-Audio-IIR-master/audiosystem.vhd" \
+"../../../../../FPGA-Audio-IIR-master/i2s_rxtx.vhd" \
+"../../../../../FPGA-Audio-IIR-master/iir.vhd" \
+"../../../../../FPGA-Audio-IIR-master/top.vhd" \
+
+# Do not sort compile order
+nosort

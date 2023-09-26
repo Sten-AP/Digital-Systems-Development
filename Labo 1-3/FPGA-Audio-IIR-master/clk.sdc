@@ -9,4 +9,4 @@
 # ##############################################################################
 
 ####---- CreateClock list ----1
-create_clock  -period 62.50 -name {clk_16mhz} [get_ports {clk_16mhz}] 
+create_clock  -period 10 -name {clk_100mhz} [get_ports {clk_100mhz}] 
