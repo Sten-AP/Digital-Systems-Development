@@ -110,14 +110,14 @@ set_property PACKAGE_PIN W5 [get_ports clk_100mhz]
 ##Buttons
 #set_property PACKAGE_PIN U18 [get_ports btnC]						
 	#set_property IOSTANDARD LVCMOS33 [get_ports btnC]
-#set_property PACKAGE_PIN T18 [get_ports btnU]						
-	#set_property IOSTANDARD LVCMOS33 [get_ports btnU]
+set_property PACKAGE_PIN T18 [get_ports volume_up]						
+	set_property IOSTANDARD LVCMOS33 [get_ports volume_up]
 #set_property PACKAGE_PIN W19 [get_ports btnL]						
 	#set_property IOSTANDARD LVCMOS33 [get_ports btnL]
 #set_property PACKAGE_PIN T17 [get_ports btnR]						
 	#set_property IOSTANDARD LVCMOS33 [get_ports btnR]
-#set_property PACKAGE_PIN U17 [get_ports btnD]						
-	#set_property IOSTANDARD LVCMOS33 [get_ports btnD]
+set_property PACKAGE_PIN U17 [get_ports volume_down]						
+	set_property IOSTANDARD LVCMOS33 [get_ports volume_down]
  
 
 
@@ -160,8 +160,8 @@ set_property PACKAGE_PIN A16 [get_ports {i2s_lr_dac}]
 set_property PACKAGE_PIN B15 [get_ports {i2s_bclk_dac}]					
 	set_property IOSTANDARD LVCMOS33 [get_ports {i2s_bclk_dac}]
 #Sch name = JB4
-set_property PACKAGE_PIN B16 [get_ports {i2s_dout}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {i2s_dout}]
+set_property PACKAGE_PIN B16 [get_ports {dout}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {dout}]
 #Sch name = JB7
 set_property PACKAGE_PIN A15 [get_ports {i2s_mclk_adc}]					
 	set_property IOSTANDARD LVCMOS33 [get_ports {i2s_mclk_adc}]

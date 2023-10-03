@@ -15,8 +15,8 @@ port(
     
     i2s_bclk : in std_logic;
     i2s_lr : in std_logic;
-    i2s_din : in std_logic;
-    i2s_dout : out std_logic := '0';
+    i2s_din_rxtx : in std_logic;
+    i2s_dout_rxtx : out std_logic := '0';
     
     out_l : out signed (23 downto 0) := (others=>'0');
     out_r : out signed (23 downto 0) := (others=>'0');
@@ -59,7 +59,7 @@ begin
 if (rising_edge(clk)) then
     
 	if (bclk_edge = b"10") then
-		in_shift <= in_shift(62 downto 0) & i2s_din;
+		in_shift <= in_shift(62 downto 0) & i2s_din_rxtx;
 		
 	   if (lr_edge = b"10") then                
 	   
@@ -85,7 +85,7 @@ begin
 if (rising_edge(clk)) then
     
 	if (bclk_edge = b"01") then
-	   i2s_dout <= shift_out(63);
+	   i2s_dout_rxtx <= shift_out(63);
 		shift_out <= shift_out(62 downto 0)&b"0";  
 	elsif (bclk_edge = b"00" and framesync='1') then
 		shift_out <= std_logic_vector(in_l) & x"00" & std_logic_vector(in_r) & x"00";

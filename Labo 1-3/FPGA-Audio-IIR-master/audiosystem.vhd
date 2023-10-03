@@ -24,8 +24,13 @@ port (
 end audiosystem;
 
 architecture Behavioral of audiosystem is
-
-
+component volume_control is
+port(
+    clk: in std_logic;
+    din : in std_logic;
+    dout : out std_logic
+    );
+end component;
    
 component i2s_rxtx is
     port (
@@ -33,8 +38,8 @@ component i2s_rxtx is
     
     i2s_bclk : in std_logic;
     i2s_lr : in std_logic;
-    i2s_din : in std_logic;
-    i2s_dout : out std_logic;
+    i2s_din_rxtx : in std_logic;
+    i2s_dout_rxtx : out std_logic;
     
     out_l : out signed (23 downto 0);
     out_r : out signed (23 downto 0);
@@ -69,7 +74,6 @@ port (
 end component; 
 
 
-
 --i2s data control signals
 signal sync : std_logic:= '0';
 
@@ -79,17 +83,12 @@ signal i2s_l_in, i2s_r_in, i2s_l_out, i2s_r_out :signed (23 downto 0):= (others=
 --32 bit IIR i/o signals
 signal iir_l_in, iir_r_in, iir_l_out, iir_r_out : signed (31 downto 0):= (others=>'0');
 
-
 --timers for i2s clk generation
 signal mclk_state : std_logic := '1';
 signal lr_counter : unsigned (7 downto 0):= (others=>'0');
 signal bclk_counter : unsigned(1 downto 0):= (others=>'0');
 
-
-
 begin
-
-
 -- i2s clock generation
 -- clk = 25 MHz
 -- mclk = clk/2 = 12.5 MHz (ideally 12.288 MHz)
@@ -115,7 +114,12 @@ end if;
 
 end process;
 
-
+volume : volume_control
+    port map (
+        clk => clk,
+        din => i2s_din,
+        dout => i2s_dout
+    );
 
 --i2s transmitter / receiver
 i2s_l_out <= resize(iir_l_out,24);
@@ -125,11 +129,10 @@ rxtx : i2s_rxtx
     port map (
         clk => clk,
         
-        
         i2s_bclk => bclk_counter(1),
 		i2s_lr => lr_counter(7),
-        i2s_din => i2s_din,
-        i2s_dout => i2s_dout,
+        i2s_din_rxtx => i2s_din,
+        i2s_dout_rxtx => i2s_dout,
         
         out_l => i2s_l_in,
         out_r => i2s_r_in,
@@ -139,8 +142,6 @@ rxtx : i2s_rxtx
         
         sync => sync
       );
-
-
 
 
 -- iir-lowpass, fs=96kHz, f_cut=1kHz, q=0.7

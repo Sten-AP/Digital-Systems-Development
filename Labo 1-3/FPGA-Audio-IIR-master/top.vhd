@@ -6,7 +6,6 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
 
-
 entity main_pll is
     port (
     clk_100mhz : in std_logic;
@@ -53,6 +52,8 @@ port(
     );
 end component;
 
+
+
 begin
 -- generatore low-to-high transition for PLL reset input
 process (clk_100mhz)
@@ -81,7 +82,7 @@ port map (
     i2s_bclk_dac => i2s_bclk_dac,
     i2s_lr_dac => i2s_lr_dac,
     i2s_dout => i2s_dout   
-    );
-    
+);
+
 
 end Behavioral;
