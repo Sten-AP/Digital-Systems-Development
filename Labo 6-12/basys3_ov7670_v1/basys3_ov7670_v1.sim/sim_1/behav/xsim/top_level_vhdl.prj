@@ -1,0 +1,15 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../basys3_ov7670_v1.srcs/sources_1/imports/ov7670_fr/RGB.vhd" \
+"../../../../basys3_ov7670_v1.srcs/sources_1/imports/ov7670_fr/address_Generator.vhd" \
+"../../../../basys3_ov7670_v1.srcs/sources_1/imports/basys3_ov7670/clocking.vhd" \
+"../../../../basys3_ov7670_v1.srcs/sources_1/imports/ov7670_fr/debounce.vhd" \
+"../../../../basys3_ov7670_v1.srcs/sources_1/imports/basys3_ov7670/i2c_sender.vhd" \
+"../../../../basys3_ov7670_v1.srcs/sources_1/imports/ov7670_fr/ov7670_capture.vhd" \
+"../../../../basys3_ov7670_v1.srcs/sources_1/imports/ov7670_fr/ov7670_controller.vhd" \
+"../../../../basys3_ov7670_v1.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.vhd" \
+"../../../../basys3_ov7670_v1.srcs/sources_1/imports/ov7670_fr/vga.vhd" \
+"../../../../basys3_ov7670_v1.srcs/sources_1/imports/ov7670_fr/top_level.vhd" \
+
+# Do not sort compile order
+nosort

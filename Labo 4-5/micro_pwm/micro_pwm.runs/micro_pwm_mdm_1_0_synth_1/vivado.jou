@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Oct 24 11:17:55 2023
+# Process ID: 83983
+# Current directory: /home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_mdm_1_0_synth_1
+# Command line: vivado -log micro_pwm_mdm_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source micro_pwm_mdm_1_0.tcl
+# Log file: /home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_mdm_1_0_synth_1/micro_pwm_mdm_1_0.vds
+# Journal file: /home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_mdm_1_0_synth_1/vivado.jou
+# Running On: PC-Sten-Linux, OS: Linux, CPU Frequency: 3400.006 MHz, CPU Physical cores: 4, Host memory: 16632 MB
+#-----------------------------------------------------------
+source micro_pwm_mdm_1_0.tcl -notrace
