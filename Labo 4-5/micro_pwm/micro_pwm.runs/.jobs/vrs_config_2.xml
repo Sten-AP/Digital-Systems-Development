@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="micro_pwm_mdm_1_0_synth_1" LaunchDir="/home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_mdm_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="micro_pwm_microblaze_0_0_synth_1" LaunchDir="/home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_microblaze_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="micro_pwm_clk_wiz_0_0_synth_1" LaunchDir="/home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="micro_pwm_dlmb_v10_0_synth_1" LaunchDir="/home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_dlmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="micro_pwm_lmb_bram_0_synth_1" LaunchDir="/home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_lmb_bram_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="micro_pwm_axi_timer_0_0_synth_1" LaunchDir="/home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_axi_timer_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="micro_pwm_rst_clk_wiz_0_100M_0_synth_1" LaunchDir="/home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_rst_clk_wiz_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="micro_pwm_xbar_0_synth_1" LaunchDir="/home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="micro_pwm_ilmb_v10_0_synth_1" LaunchDir="/home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_ilmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="micro_pwm_dlmb_bram_if_cntlr_0_synth_1" LaunchDir="/home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_dlmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="micro_pwm_axi_uartlite_0_0_synth_1" LaunchDir="/home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_axi_uartlite_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="micro_pwm_ilmb_bram_if_cntlr_0_synth_1" LaunchDir="/home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_ilmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="micro_pwm_mdm_1_0_synth_1"/>
+		<Parent Id="micro_pwm_microblaze_0_0_synth_1"/>
+		<Parent Id="micro_pwm_clk_wiz_0_0_synth_1"/>
+		<Parent Id="micro_pwm_dlmb_v10_0_synth_1"/>
+		<Parent Id="micro_pwm_lmb_bram_0_synth_1"/>
+		<Parent Id="micro_pwm_axi_timer_0_0_synth_1"/>
+		<Parent Id="micro_pwm_rst_clk_wiz_0_100M_0_synth_1"/>
+		<Parent Id="micro_pwm_xbar_0_synth_1"/>
+		<Parent Id="micro_pwm_ilmb_v10_0_synth_1"/>
+		<Parent Id="micro_pwm_dlmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="micro_pwm_axi_uartlite_0_0_synth_1"/>
+		<Parent Id="micro_pwm_ilmb_bram_if_cntlr_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

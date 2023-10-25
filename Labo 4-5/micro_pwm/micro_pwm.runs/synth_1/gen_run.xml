@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1698139070">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1698140655">
   <File Type="VDS-TIMINGSUMMARY" Name="micro_pwm_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="micro_pwm_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="micro_pwm_wrapper_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="micro_pwm_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="micro_pwm_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="micro_pwm_wrapper.vds"/>
+  <File Type="REPORTS-TCL" Name="micro_pwm_wrapper_reports.tcl"/>
   <File Type="VDS-TIMING-PB" Name="micro_pwm_wrapper_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="micro_pwm_wrapper.tcl"/>
-  <File Type="REPORTS-TCL" Name="micro_pwm_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="micro_pwm_wrapper.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="micro_pwm_wrapper_drc_synth.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/micro_pwm/micro_pwm.bd">
@@ -33,7 +33,14 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/pwm.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/pwm.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -44,21 +51,19 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="micro_pwm_axi_uartlite_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="micro_pwm_dlmb_v10_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="micro_pwm_mdm_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="micro_pwm_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="micro_pwm_dlmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="micro_pwm_ilmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="micro_pwm_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="micro_pwm_rst_clk_wiz_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="micro_pwm_ilmb_bram_if_cntlr_0"/>
   <BlockFileSet Type="BlockSrcs" Name="micro_pwm_axi_timer_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="micro_pwm_ilmb_v10_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="micro_pwm_dlmb_bram_if_cntlr_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="micro_pwm_microblaze_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="micro_pwm_lmb_bram_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="micro_pwm_rst_clk_wiz_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="micro_pwm_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="micro_pwm_dlmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="micro_pwm_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="micro_pwm_microblaze_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="micro_pwm_mdm_1_0"/>
 </GenRun>

@@ -1,0 +1,14 @@
+
+*** Running vivado
+    with args -log micro_pwm_ilmb_v10_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source micro_pwm_ilmb_v10_0.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source micro_pwm_ilmb_v10_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2635.324 ; gain = 558.789 ; free physical = 11834 ; free virtual = 15360
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP micro_pwm_ilmb_v10_0, cache-ID = 10e94bb90dc28c7e.
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 24 11:32:20 2023...

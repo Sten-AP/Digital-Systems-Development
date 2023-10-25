@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Tue Oct 24 11:17:55 2023
-# Process ID: 83993
+# Start of session at: Tue Oct 24 11:28:36 2023
+# Process ID: 6884
 # Current directory: /home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_clk_wiz_0_0_synth_1
 # Command line: vivado -log micro_pwm_clk_wiz_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source micro_pwm_clk_wiz_0_0.tcl
 # Log file: /home/sten/Desktop/Digital-Systems-Development/Labo 4-5/micro_pwm/micro_pwm.runs/micro_pwm_clk_wiz_0_0_synth_1/micro_pwm_clk_wiz_0_0.vds
