@@ -140,7 +140,7 @@ filters: process(Din, Nblank)
 begin
     if Nblank = '1' then
         if switch = '1' then
-            -- Collorless video
+            -- Colourless video
             for i in 0 to 4095 loop
                 lut(i) <= std_logic_vector(to_unsigned(i, 8));
             end loop;
