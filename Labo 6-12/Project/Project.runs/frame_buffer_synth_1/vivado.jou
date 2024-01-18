@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Jan 17 20:02:59 2024
+# Process ID: 44492
+# Current directory: D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/basys3_ov7670_v1/basys3_ov7670_v1.runs/frame_buffer_synth_1
+# Command line: vivado.exe -log frame_buffer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source frame_buffer.tcl
+# Log file: D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/basys3_ov7670_v1/basys3_ov7670_v1.runs/frame_buffer_synth_1/frame_buffer.vds
+# Journal file: D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/basys3_ov7670_v1/basys3_ov7670_v1.runs/frame_buffer_synth_1\vivado.jou
+# Running On: PC-Sten, OS: Windows, CPU Frequency: 4104 MHz, CPU Physical cores: 6, Host memory: 17097 MB
+#-----------------------------------------------------------
+source frame_buffer.tcl -notrace
