@@ -4,27 +4,27 @@ Hulsbergen Sten  - 3ITIOT
 
 ## Inhoud
 
-[1. Doel](##-1-Doel)
-[2. Ontwikkelingsplan](##-2-Ontwikkelingsplan)
-[3. Testplan](##-3-Testplan)
-[4. Camera](##-4-Camera)
-[5. VGA](##-5-VGA)
-&emsp;[5.1. Code](###-51-Code)
-&emsp;[5.2. Resultaat](###-52-Resultaat)
-[6. Filters](##-6-Filters)
-&emsp;[6.1. Geinverteerd](###-61-Geinverteerd)
-&emsp;&emsp;[6.1.1. Code](####-611-Code)
-&emsp;&emsp;[6.1.2. Resultaat](####-612-Resultaat)
-&emsp;[6.2. Zwart en wit](###-62-Zwart-en-wit)
-&emsp;&emsp;[6.2.1. Code](####-621-Code)
-&emsp;&emsp;[6.2.2. Resultaat](####-622-Resultaat)
-&emsp;[6.3. Kleurloos](###-63-Kleurloos)
-&emsp;&emsp;[6.3.1. Code](####-631-Code)
-&emsp;&emsp;[6.3.2. Resultaat](####-632-Resultaat)
-[7. Compressie](##-7-Compressie)
-&emsp;[7.1. Code](###-71-Code)
-&emsp;[7.2. Resultaat](###-72-Resultaat)
-[8. Datasheets](##-8-Datasheets)
+[1. Doel](##-1-Doel)</br>
+[2. Ontwikkelingsplan](##-2-Ontwikkelingsplan)</br>
+[3. Testplan](##-3-Testplan)</br>
+[4. Camera](##-4-Camera)</br>
+[5. VGA](##-5-VGA)</br>
+&emsp;[5.1. Code](###-51-Code)</br>
+&emsp;[5.2. Resultaat](###-52-Resultaat)</br>
+[6. Filters](##-6-Filters)</br>
+&emsp;[6.1. Geinverteerd](###-61-Geinverteerd)</br>
+&emsp;&emsp;[6.1.1. Code](####-611-Code)</br>
+&emsp;&emsp;[6.1.2. Resultaat](####-612-Resultaat)</br>
+&emsp;[6.2. Zwart en wit](###-62-Zwart-en-wit)</br>
+&emsp;&emsp;[6.2.1. Code](####-621-Code)</br>
+&emsp;&emsp;[6.2.2. Resultaat](####-622-Resultaat)</br>
+&emsp;[6.3. Kleurloos](###-63-Kleurloos)</br>
+&emsp;&emsp;[6.3.1. Code](####-631-Code)</br>
+&emsp;&emsp;[6.3.2. Resultaat](####-632-Resultaat)</br>
+[7. Compressie](##-7-Compressie)</br>
+&emsp;[7.1. Code](###-71-Code)</br>
+&emsp;[7.2. Resultaat](###-72-Resultaat)</br>
+[8. Datasheets](##-8-Datasheets)</br>
 [9. Bronnen](##-9-Bronnen)
 
 ## 1. Doel
