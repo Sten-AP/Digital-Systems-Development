@@ -182,10 +182,9 @@ end Behavioral;
 
 ### 5.2 Resultaat
 
-<div style="text-align:center">
+<div style="text-align:center; height:300px">
 
-![Normaal](Afbeeldingen/Normaal.jpg){ height=300px }
-
+![Normaal](Afbeeldingen/Normaal.jpg)
 </div>
 
 
