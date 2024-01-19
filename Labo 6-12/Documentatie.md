@@ -183,10 +183,8 @@ end Behavioral;
 ### 5.2 Resultaat
 
 <p align="center">
-  <img src="Afbeeldingen/Normaal.jpg" alt="Video normaal" height="300px">
+    <img src="Afbeeldingen/Normaal.jpg" alt="Video normaal" height="400px">
 </p>
-
-
 
 ## 6. Filters
 
@@ -236,7 +234,9 @@ end Behavioral;
 
 #### 6.1.2 Resultaat
 
-![Geinverteerd](Afbeeldingen/Geinverteerd.jpg)
+<p align="center">
+    <img src="Afbeeldingen/Geinverteerd.jpg" alt="Video geinverteerd" height="400px">
+</p>
 
 ### 6.2 Zwart en wit
 
@@ -285,7 +285,9 @@ end Behavioral;
 
 #### 6.2.2 Resultaat
 
-![Zwart wit](Afbeeldingen/Zwart_wit.jpg)
+<p align="center">
+    <img src="Afbeeldingen/Zwart_wit.jpg" alt="Video zwart wit" height="400px">
+</p>
 
 ### 6.3 Kleurloos
 
@@ -334,7 +336,9 @@ end Behavioral;
 
 #### 6.3.2 Resultaat
 
-![Kleurloos](Afbeeldingen/Kleurloos.jpg)
+<p align="center">
+    <img src="Afbeeldingen/Kleurloos.jpg" alt="Video kleurloos" height="400px">
+</p>
 
 ## 7. Compressie
 
