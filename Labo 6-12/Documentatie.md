@@ -335,10 +335,11 @@ end Behavioral;
 
 ## 7. Compressie
 
+Dit is het moeilijkste onderdeel van dit project. Veel opzoekwerk komt veel uit op betaalde IP-blocks wat natuurlijk niet goed is. Informatie over het zelf maken van een compressieblock is ook zeer gering, dit onderdeel gaat net wel of net niet klaar zijn.
+
 ### 7.1. Code
 
 ### 7.2. Resultaat
-
 
 ## 8. Datasheets
 
