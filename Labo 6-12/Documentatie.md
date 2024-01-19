@@ -4,13 +4,14 @@ Hulsbergen Sten  - 3ITIOT
 
 ## Inhoud
 
-1. Ontwikkelingsplan
-2. Testplan
-3. Camera
-4. VGA
+1. Doel
+2. Ontwikkelingsplan
+3. Testplan
+4. Camera
+5. VGA
    1. Code
    2. Resultaat
-5. Filters
+6. Filters
    1. Geinverteerd
       1. Code
       2. Resultaat
@@ -20,13 +21,17 @@ Hulsbergen Sten  - 3ITIOT
    3. Kleurloos
       1. Code
       2. Resultaat
-6. Compressie
+7. Compressie
    1. Code
    2. Resultaat
-7. Datasheets
-8. Bronnen
+8. Datasheets
+9. Bronnen
 
-## 1. Ontwikkelingsplan
+## 1. Doel
+
+Het doel van dit project is het opnemen van live videobeelden en deze weergeven op een monitor via VGA. Vervolgens een aantal filters toe te voegen en de effecten ervan te waarnemen op de monitor. En als laatste een video-compressie block toevoegen om minder data te hebben bij het tonen van de beelden.
+
+## 2. Ontwikkelingsplan
 
 1. Bestuderen van de code op FPGA4Student.
 2. Verbinden van de camera en het VGA-scherm met de FPGA.
@@ -41,22 +46,22 @@ Hulsbergen Sten  - 3ITIOT
 8. Rapport over de resultaten en de leerpunten maken.
 9. Presentatie voorbereiden.
 
-## 2. Testplan
+## 3. Testplan
 
 1. Test de functionaliteit van de video-opname- en weergavefuncties.
 2. Test de effecten van de filters op de video.
 3. Test van het video-compressieblok.
 4. Valideer de resultaten van het projectrapport.
 
-## 3. Camera
+## 4. Camera
 
 Voor de code van de camera heb ik gebruik gemaakt van de bron *FPGA4Students*, deze heb ik gedownload en verder ingesteld naar de instellingen die nodig zijn bij dit project.
 
-## 4. VGA
+## 5. VGA
 
 Voor de code om de VGA aan te sturen heb ik ook gebruik gemaakt van de bron *FPGA4Students*, maar deze is een groot deel aangepast om te kunnen werken met de nodige filters. De code voor het uitsturen van de kleuren is als volgt:
 
-### 4.1. Code
+### 5.1. Code
 
 ```
 library IEEE;
@@ -175,18 +180,18 @@ end process;
 end Behavioral;
 ```
 
-### 4.2. Resultaat
+### 5.2. Resultaat
 
 ![Normaal](Afbeeldingen/Normaal.jpg)
 
 
-## 5. Filters
+## 6. Filters
 
-### 5.1. Geinverteerd
+### 6.1. Geinverteerd
 
 De kleuren inverteren is niet moeilijk, hierbij moest alleen `not` geplaatst worden voor de kleuren om te draaien. Hierbij heb ik extra lijnen geplaatst waarbij de kleuren geschaald worden naar 255. Deze waarden worden vervolgens geplaatst op de RGB-lijnen van de VGA.
 
-#### 5.1.1 Code
+#### 6.1.1 Code
 
 ```
 library IEEE;
@@ -226,15 +231,15 @@ end process;
 end Behavioral;
 ```
 
-#### 5.1.2 Resultaat
+#### 6.1.2 Resultaat
 
 ![Geinverteerd](Afbeeldingen/Geinverteerd.jpg)
 
-### 5.2 Zwart en wit
+### 6.2 Zwart en wit
 
 Dit is wat moeilijker, met een korte berekening kom je uit op alleen wit en zwart waardes, waardoor deze alleen overblijven. Deze waarden worden vervolgens geplaatst op de RGB-lijnen van de VGA.
 
-#### 5.2.1 Code
+#### 6.2.1 Code
 
 ```
 library IEEE;
@@ -275,15 +280,15 @@ end process;
 end Behavioral;
 ```
 
-#### 5.2.2 Resultaat
+#### 6.2.2 Resultaat
 
 ![Zwart wit](Afbeeldingen/Zwart_wit.jpg)
 
-### 5.3 Kleurloos
+### 6.3 Kleurloos
 
 Om de kleuren weg te laten en gebruik te maken van grijswaardes was het moeilijkst. Hierbij heb ik grondig gebruik gemaakt van bepaalde bronnen. Deze waarden worden vervolgens geplaatst op de RGB-lijnen van de VGA.
 
-#### 5.3.1 Code
+#### 6.3.1 Code
 
 ```
 library IEEE;
@@ -324,15 +329,22 @@ end process;
 end Behavioral;
 ```
 
-#### 5.3.2 Resultaat
+#### 6.3.2 Resultaat
 
 ![Kleurloos](Afbeeldingen/Kleurloos.jpg)
 
-## Datasheets
+## 7. Compressie
+
+### 7.1. Code
+
+### 7.2. Resultaat
+
+
+## 8. Datasheets
 
 [OV7670 Camera](https://www.voti.nl/docs/OV7670.pdf)
 
-## Bronnen
+## 9. Bronnen
 
 [FPGA4Student: videobeelden via VGA](https://www.fpga4student.com/2018/08/basys-3-fpga-ov7670-camera.html)</br>
 [Startingelectronics: inverteerde kleuren filter](https://startingelectronics.com/software/VHDL-CPLD-course/tut1-inverter-buffer/)</br>
