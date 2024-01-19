@@ -2,7 +2,31 @@
 
 Hulsbergen Sten  - 3ITIOT
 
-## Ontwikkelingsplan
+## Inhoud
+
+1. Ontwikkelingsplan
+2. Testplan
+3. Camera
+4. VGA
+   1. Code
+   2. Resultaat
+5. Filters
+   1. Geinverteerd
+      1. Code
+      2. Resultaat
+   2. Zwart en wit
+      1. Code
+      2. Resultaat
+   3. Kleurloos
+      1. Code
+      2. Resultaat
+6. Compressie
+   1. Code
+   2. Resultaat
+7. Datasheets
+8. Bronnen
+
+## 1. Ontwikkelingsplan
 
 1. Bestuderen van de code op FPGA4Student.
 2. Verbinden van de camera en het VGA-scherm met de FPGA.
@@ -17,18 +41,152 @@ Hulsbergen Sten  - 3ITIOT
 8. Rapport over de resultaten en de leerpunten maken.
 9. Presentatie voorbereiden.
 
-## Testplan
+## 2. Testplan
 
 1. Test de functionaliteit van de video-opname- en weergavefuncties.
 2. Test de effecten van de filters op de video.
 3. Test van het video-compressieblok.
 4. Valideer de resultaten van het projectrapport.
 
-## Filters
+## 3. Camera
 
-### Geinverteerd
+Voor de code van de camera heb ik gebruik gemaakt van de bron *FPGA4Students*, deze heb ik gedownload en verder ingesteld naar de instellingen die nodig zijn bij dit project.
 
-De kleuren inverteren is niet moeilijk, hierbij moest alleen `not` geplaatst worden voor de kleuren om te draaien. Hierbij heb ik extra lijnen geplaatst waarbij de kleuren geschaald worden naar 255. Dit is als volgt:
+## 4. VGA
+
+Voor de code om de VGA aan te sturen heb ik ook gebruik gemaakt van de bron *FPGA4Students*, maar deze is een groot deel aangepast om te kunnen werken met de nodige filters. De code voor het uitsturen van de kleuren is als volgt:
+
+### 4.1. Code
+
+```
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use ieee.numeric_std.all;
+
+
+entity RGB is
+    Port (
+		    filter_switch_inverted : in STD_LOGIC;
+            filter_switch_b_and_w : in STD_LOGIC;
+            filter_switch_colourless : in STD_LOGIC;
+            compression_switch : in std_logic;
+
+            Din : in STD_LOGIC_VECTOR (11 downto 0);
+		    Nblank : in	STD_LOGIC;
+            R_out, G_out, B_out : out STD_LOGIC_VECTOR (7 downto 0));
+end RGB;
+
+architecture Behavioral of RGB is
+
+    signal R_inverted, G_inverted, B_inverted : STD_LOGIC_VECTOR (7 downto 0);
+    signal R_b_and_w, G_b_and_w, B_b_and_w : STD_LOGIC_VECTOR (7 downto 0);
+    signal R_colourless, G_colourless, B_colourless : STD_LOGIC_VECTOR (7 downto 0);
+
+	COMPONENT filter_inverted
+	PORT(
+    		switch : in STD_LOGIC;
+            Din 	: in	STD_LOGIC_VECTOR (11 downto 0);
+		    Nblank : in	STD_LOGIC;
+            R_inverted, G_inverted, B_inverted : out	STD_LOGIC_VECTOR (7 downto 0)
+		);
+	END COMPONENT;
+
+	COMPONENT filter_b_and_w
+	PORT(
+    		switch : in STD_LOGIC;
+            Din 	: in	STD_LOGIC_VECTOR (11 downto 0);
+		    Nblank : in	STD_LOGIC;
+            R_b_and_w, G_b_and_w, B_b_and_w : out	STD_LOGIC_VECTOR (7 downto 0)
+		);
+	END COMPONENT;
+	
+	COMPONENT filter_colourless
+	PORT(
+    		switch : in STD_LOGIC;
+            Din 	: in	STD_LOGIC_VECTOR (11 downto 0);
+		    Nblank : in	STD_LOGIC;
+            R_colourless, G_colourless, B_colourless : out	STD_LOGIC_VECTOR (7 downto 0)
+		);
+	END COMPONENT;
+
+begin
+
+	Inst_filter_inverted: filter_inverted PORT MAP(
+		switch => filter_switch_inverted,
+        Din => Din,
+        Nblank => Nblank,
+		R_inverted => R_inverted,
+		G_inverted => G_inverted,
+		B_inverted => B_inverted
+	);
+
+	Inst_filter_b_and_w: filter_b_and_w PORT MAP(
+		switch => filter_switch_b_and_w,
+        Din => Din,
+        Nblank => Nblank,
+		R_b_and_w => R_b_and_w,
+		G_b_and_w => G_b_and_w,
+		B_b_and_w => B_b_and_w
+	);
+	
+	Inst_filter_colourless: filter_colourless PORT MAP(
+		switch => filter_switch_colourless,
+        Din => Din,
+        Nblank => Nblank,
+		R_colourless => R_colourless,
+		G_colourless => G_colourless,
+		B_colourless => B_colourless
+	);
+
+
+filters: process(filter_switch_inverted, filter_switch_b_and_w, filter_switch_colourless)
+begin
+    if Nblank = '1' then
+        if filter_switch_inverted = '1' then
+            R_out <= R_inverted;
+            G_out <= G_inverted;
+            B_out <= B_inverted;
+        elsif filter_switch_b_and_w = '1' then
+            R_out <= R_b_and_w;
+            G_out <= G_b_and_w;
+            B_out <= B_b_and_w;
+        elsif filter_switch_colourless = '1' then
+            R_out <= R_colourless;
+            G_out <= G_colourless;
+            B_out <= B_colourless;
+        else
+            -- Normale video
+--            R_out <=  Din(11 downto 8) & Din(11 downto 8);
+--            G_out <= Din(7 downto 4) & Din(7 downto 4);
+--            B_out <= Din(3 downto 0) & Din(3 downto 0);
+
+            -- Normale video met aangepaste schalingsfactor voor een meer gebalanceerde kleurweergave
+            R_out <= std_logic_vector(resize(to_signed(to_integer(unsigned(Din(11 downto 8))) * 17, 8), 8));
+            G_out <= std_logic_vector(resize(to_signed(to_integer(unsigned(Din(7 downto 4))) * 17, 8), 8));
+            B_out <= std_logic_vector(resize(to_signed(to_integer(unsigned(Din(3 downto 0))) * 17, 8), 8));
+        end if;
+    else
+        R_out <= "00000000";
+        G_out <= "00000000";
+        B_out <= "00000000";
+    end if;
+end process;
+end Behavioral;
+```
+
+### 4.2. Resultaat
+
+![Normaal](Afbeeldingen/Normaal.jpg)
+
+
+## 5. Filters
+
+### 5.1. Geinverteerd
+
+De kleuren inverteren is niet moeilijk, hierbij moest alleen `not` geplaatst worden voor de kleuren om te draaien. Hierbij heb ik extra lijnen geplaatst waarbij de kleuren geschaald worden naar 255. Deze waarden worden vervolgens geplaatst op de RGB-lijnen van de VGA.
+
+#### 5.1.1 Code
 
 ```
 library IEEE;
@@ -68,9 +226,15 @@ end process;
 end Behavioral;
 ```
 
-### Zwart en wit
+#### 5.1.2 Resultaat
 
-Dit is wat moeilijker, met een korte berekening kom je uit op alleen wit en zwart waardes, waardoor deze alleen overblijven. Dit is als volgt:
+![Geinverteerd](Afbeeldingen/Geinverteerd.jpg)
+
+### 5.2 Zwart en wit
+
+Dit is wat moeilijker, met een korte berekening kom je uit op alleen wit en zwart waardes, waardoor deze alleen overblijven. Deze waarden worden vervolgens geplaatst op de RGB-lijnen van de VGA.
+
+#### 5.2.1 Code
 
 ```
 library IEEE;
@@ -111,9 +275,15 @@ end process;
 end Behavioral;
 ```
 
-### Kleurloos
+#### 5.2.2 Resultaat
 
-Om de kleuren weg te laten en gebruik te maken van grijswaardes was het moeilijkst. Hierbij heb ik grondig gebruik gemaakt van bepaalde bronnen. Dit is als volgt:
+![Zwart wit](Afbeeldingen/Zwart_wit.jpg)
+
+### 5.3 Kleurloos
+
+Om de kleuren weg te laten en gebruik te maken van grijswaardes was het moeilijkst. Hierbij heb ik grondig gebruik gemaakt van bepaalde bronnen. Deze waarden worden vervolgens geplaatst op de RGB-lijnen van de VGA.
+
+#### 5.3.1 Code
 
 ```
 library IEEE;
@@ -153,6 +323,10 @@ begin
 end process;
 end Behavioral;
 ```
+
+#### 5.3.2 Resultaat
+
+![Kleurloos](Afbeeldingen/Kleurloos.jpg)
 
 ## Datasheets
 

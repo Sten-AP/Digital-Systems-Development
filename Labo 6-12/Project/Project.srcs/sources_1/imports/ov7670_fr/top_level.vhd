@@ -161,7 +161,7 @@ architecture Behavioral of top_level is
    
     signal rdaddress  : std_logic_vector(18 downto 0);
     signal rddata     : std_logic_vector(11 downto 0);
-    signal rddata_out     : std_logic_vector(11 downto 0);
+--    signal rddata_out     : std_logic_vector(11 downto 0);
     signal red,green,blue : std_logic_vector(7 downto 0);
     signal activeArea : std_logic;
    
@@ -252,7 +252,7 @@ begin
 	);
 
 	Inst_RGB: RGB PORT MAP(
-		Din => rddata_out,
+		Din => rddata,
 		Nblank => activeArea,
 		R_out => red,
 		G_out => green,
@@ -272,13 +272,13 @@ begin
 		address => rdaddress
 	);
 
-    Inst_video_compression: video_compression  PORT MAP(
-        clk => clk_vga,
-        reset => btnc,
-        input_pixel => rddata(0),
-        compression_switch => compression_switch,
-        compressed_data => rddata_out
-    );
+--    Inst_video_compression: video_compression  PORT MAP(
+--        clk => clk_vga,
+--        reset => btnc,
+--        input_pixel => rddata(0),
+--        compression_switch => compression_switch,
+--        compressed_data => rddata_out
+--    );
 
 
 end Behavioral;

@@ -115,9 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {Synth 8-9493}  -string {{ERROR: [Synth 8-9493] found '0' definitions of operator "*", cannot determine exact overloaded matching definition for "*" [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/Inst_video_compression.vhd:54]}}  -suppress 
 
 OPTRACE "impl_1" START { ROLLUP_1 }
@@ -126,9 +123,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 3
-  set_param synth.incrementalSynthesisCache C:/Users/stenh/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-60076-PC-Sten/incrSyn
   set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tcpg236-3

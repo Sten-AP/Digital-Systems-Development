@@ -10,5 +10,558 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source top_level.tcl -notrace
-ERROR: [Common 17-165] Too many positional options when parsing '6-12/Project/Project.srcs/utils_1/imports/synth_1/top_level.dcp', please type 'read_checkpoint -help' for usage info.
-INFO: [Common 17-206] Exiting Vivado at Thu Jan 18 23:50:15 2024...
+Command: synth_design -top top_level -part xc7a35tcpg236-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-3
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 52760
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1271.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:35]
+INFO: [Synth 8-3491] module 'clocking' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd:75' bound to instance 'Inst_clocking' of component 'clocking' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:181]
+INFO: [Synth 8-638] synthesizing module 'clocking' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd:85]
+INFO: [Synth 8-113] binding component instance 'clkin1_buf' to cell 'IBUFG' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd:119]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT1_DIVIDE bound to: 40 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT4_CASCADE bound to: 0 - type: bool 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
+	Parameter STARTUP_WAIT bound to: 0 - type: bool 
+INFO: [Synth 8-113] binding component instance 'mmcm_adv_inst' to cell 'MMCME2_ADV' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd:130]
+INFO: [Synth 8-113] binding component instance 'clkf_buf' to cell 'BUFG' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd:193]
+INFO: [Synth 8-113] binding component instance 'clkout1_buf' to cell 'BUFG' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd:199]
+INFO: [Synth 8-113] binding component instance 'clkout2_buf' to cell 'BUFG' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd:206]
+INFO: [Synth 8-256] done synthesizing module 'clocking' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd:85]
+INFO: [Synth 8-3491] module 'VGA' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/vga.vhd:10' bound to instance 'Inst_VGA' of component 'VGA' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:191]
+INFO: [Synth 8-638] synthesizing module 'VGA' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/vga.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/vga.vhd:21]
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/debounce.vhd:11' bound to instance 'Inst_debounce' of component 'debounce' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:203]
+INFO: [Synth 8-638] synthesizing module 'debounce' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/debounce.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/debounce.vhd:17]
+INFO: [Synth 8-3491] module 'ov7670_controller' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_controller.vhd:11' bound to instance 'Inst_ov7670_controller' of component 'ov7670_controller' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_controller.vhd:23]
+INFO: [Synth 8-3491] module 'i2c_sender' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/i2c_sender.vhd:11' bound to instance 'Inst_i2c_sender' of component 'i2c_sender' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_controller.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/i2c_sender.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/i2c_sender.vhd:22]
+INFO: [Synth 8-3491] module 'ov7670_registers' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.vhd:12' bound to instance 'Inst_ov7670_registers' of component 'ov7670_registers' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_controller.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_controller.vhd:23]
+INFO: [Synth 8-3491] module 'frame_buffer' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/.Xil/Vivado-18332-PC-Sten/realtime/frame_buffer_stub.v:5' bound to instance 'Inst_frame_buffer' of component 'frame_buffer' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:232]
+INFO: [Synth 8-6157] synthesizing module 'frame_buffer' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/.Xil/Vivado-18332-PC-Sten/realtime/frame_buffer_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'frame_buffer' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/.Xil/Vivado-18332-PC-Sten/realtime/frame_buffer_stub.v:5]
+INFO: [Synth 8-3491] module 'ov7670_capture' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_capture.vhd:17' bound to instance 'Inst_ov7670_capture' of component 'ov7670_capture' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:242]
+INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_capture.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_capture.vhd:29]
+INFO: [Synth 8-3491] module 'RGB' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:7' bound to instance 'Inst_RGB' of component 'RGB' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:254]
+INFO: [Synth 8-638] synthesizing module 'RGB' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:19]
+INFO: [Synth 8-3491] module 'filter_inverted' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_inverted.vhd:7' bound to instance 'Inst_filter_inverted' of component 'filter_inverted' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'filter_inverted' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_inverted.vhd:16]
+WARNING: [Synth 8-614] signal 'switch' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_inverted.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'filter_inverted' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_inverted.vhd:16]
+INFO: [Synth 8-3491] module 'filter_b_and_w' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_b_and_w.vhd:7' bound to instance 'Inst_filter_b_and_w' of component 'filter_b_and_w' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'filter_b_and_w' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_b_and_w.vhd:16]
+WARNING: [Synth 8-614] signal 'switch' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_b_and_w.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'filter_b_and_w' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_b_and_w.vhd:16]
+INFO: [Synth 8-3491] module 'filter_colourless' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:7' bound to instance 'Inst_filter_colourless' of component 'filter_colourless' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'filter_colourless' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:16]
+WARNING: [Synth 8-614] signal 'switch' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:21]
+WARNING: [Synth 8-614] signal 'lut' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'filter_colourless' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:16]
+WARNING: [Synth 8-614] signal 'Nblank' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:82]
+WARNING: [Synth 8-614] signal 'R_inverted' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:82]
+WARNING: [Synth 8-614] signal 'G_inverted' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:82]
+WARNING: [Synth 8-614] signal 'B_inverted' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:82]
+WARNING: [Synth 8-614] signal 'R_b_and_w' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:82]
+WARNING: [Synth 8-614] signal 'G_b_and_w' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:82]
+WARNING: [Synth 8-614] signal 'B_b_and_w' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:82]
+WARNING: [Synth 8-614] signal 'R_colourless' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:82]
+WARNING: [Synth 8-614] signal 'G_colourless' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:82]
+WARNING: [Synth 8-614] signal 'B_colourless' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:82]
+WARNING: [Synth 8-614] signal 'Din' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'RGB' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:19]
+INFO: [Synth 8-3491] module 'Address_Generator' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/address_Generator.vhd:8' bound to instance 'Inst_Address_Generator' of component 'Address_Generator' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:266]
+INFO: [Synth 8-638] synthesizing module 'Address_Generator' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/address_Generator.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/address_Generator.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:35]
+WARNING: [Synth 8-7129] Port compression_switch in module RGB is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1418.086 ; gain = 146.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1418.086 ; gain = 146.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1418.086 ; gain = 146.344
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.194 . Memory (MB): peak = 1418.086 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+WARNING: [Netlist 29-432] The IBUFG primitive 'Inst_clocking/clkin1_buf' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/.Xil/Vivado-18332-PC-Sten/frame_buffer/frame_buffer/frame_buffer_in_context.xdc] for cell 'Inst_frame_buffer'
+Finished Parsing XDC File [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/.Xil/Vivado-18332-PC-Sten/frame_buffer/frame_buffer/frame_buffer_in_context.xdc] for cell 'Inst_frame_buffer'
+Parsing XDC File [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/constrs_1/imports/new/basys3_xdc.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/constrs_1/imports/new/basys3_xdc.xdc:99]
+Finished Parsing XDC File [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/constrs_1/imports/new/basys3_xdc.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/constrs_1/imports/new/basys3_xdc.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_level_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/constrs_1/imports/new/basys3_xdc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1501.145 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IBUFG => IBUF: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1501.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1501.145 ; gain = 229.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1501.145 ; gain = 229.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for Inst_frame_buffer. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1501.145 ; gain = 229.402
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6040] Register address_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+INFO: [Synth 8-802] inferred FSM for state register 'line_reg' in module 'ov7670_capture'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                             0001 |                               00
+                 iSTATE1 |                             0010 |                               01
+                 iSTATE2 |                             0100 |                               10
+                  iSTATE |                             1000 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'line_reg' using encoding 'one-hot' in module 'ov7670_capture'
+WARNING: [Synth 8-327] inferring latch for variable 'R_inverted_reg' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_inverted.vhd:29]
+WARNING: [Synth 8-327] inferring latch for variable 'G_inverted_reg' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_inverted.vhd:30]
+WARNING: [Synth 8-327] inferring latch for variable 'B_inverted_reg' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_inverted.vhd:31]
+WARNING: [Synth 8-327] inferring latch for variable 'R_b_and_w_reg' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_b_and_w.vhd:25]
+WARNING: [Synth 8-327] inferring latch for variable 'R_colourless_reg' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:30]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[0]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[1]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[2]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[3]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[4]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[5]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[6]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[7]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[8]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[9]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[10]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[11]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[12]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[13]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[14]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[15]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[16]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[17]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[18]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[19]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[20]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[21]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[22]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[23]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[24]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[25]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[26]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[27]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[28]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[29]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[30]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[31]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[32]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[33]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[34]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[35]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[36]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[37]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[38]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[39]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[40]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[41]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[42]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[43]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[44]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[45]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[46]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[47]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[48]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[49]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[50]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[51]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[52]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[53]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[54]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[55]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[56]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[57]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[58]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[59]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[60]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[61]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[62]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[63]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[64]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[65]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[66]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[67]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[68]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[69]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[70]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[71]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[72]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[73]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[74]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[75]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[76]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[77]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[78]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[79]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[80]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[81]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[82]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[83]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[84]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[85]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[86]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[87]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[88]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[89]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[90]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[91]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[92]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[93]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'lut_reg[94]' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:27]
+INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1501.145 ; gain = 229.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 4     
+	   3 Input    6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---ROMs : 
+	                    ROMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 2     
+	   4 Input   17 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 6     
+	4096 Input    8 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   7 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 13    
+	   3 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-6040] Register Inst_ov7670_controller/Inst_ov7670_registers/address_reg_rep_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-3917] design top_level has port ov7670_pwdn driven by constant 0
+WARNING: [Synth 8-3917] design top_level has port ov7670_reset driven by constant 1
+WARNING: [Synth 8-7129] Port compression_switch in module top_level is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_b_and_w/R_b_and_w_reg[3]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_b_and_w/R_b_and_w_reg[2]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_b_and_w/R_b_and_w_reg[1]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_b_and_w/R_b_and_w_reg[0]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/R_colourless_reg[3]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/R_colourless_reg[2]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/R_colourless_reg[1]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/R_colourless_reg[0]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[0][7]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[0][6]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[0][5]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[0][4]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[0][3]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[0][2]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[0][1]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[0][0]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[1][7]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[1][6]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[1][5]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[1][4]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[1][3]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[1][2]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[1][1]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[1][0]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[2][7]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[2][6]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[2][5]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[2][4]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[2][3]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[2][2]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[2][1]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[2][0]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[3][7]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[3][6]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[3][5]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[3][4]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[3][3]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[3][2]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[3][1]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[3][0]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[4][7]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[4][6]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[4][5]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[4][4]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[4][3]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[4][2]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[4][1]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[4][0]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[5][7]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[5][6]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[5][5]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[5][4]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[5][3]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[5][2]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[5][1]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[5][0]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[6][7]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[6][6]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[6][5]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[6][4]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[6][3]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[6][2]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[6][1]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[6][0]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[7][7]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[7][6]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[7][5]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[7][4]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[7][3]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[7][2]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[7][1]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[7][0]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[8][7]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[8][6]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[8][5]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[8][4]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[8][3]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[8][2]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[8][1]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[8][0]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[9][7]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[9][6]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[9][5]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[9][4]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[9][3]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[9][2]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[9][1]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[9][0]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[10][7]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[10][6]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[10][5]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[10][4]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[10][3]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[10][2]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[10][1]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[10][0]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[11][7]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[11][6]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[11][5]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_RGB/Inst_filter_colourless/lut_reg[11][4]) is unused and will be removed from module top_level.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1501.145 ; gain = 229.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+-------------------------------------------------------+---------------+----------------+
+|Module Name | RTL Object                                            | Depth x Width | Implemented As | 
++------------+-------------------------------------------------------+---------------+----------------+
+|top_level   | Inst_ov7670_controller/Inst_ov7670_registers/sreg_reg | 256x16        | Block RAM      | 
++------------+-------------------------------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 1501.145 ; gain = 229.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 1501.145 ; gain = 229.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance Inst_ov7670_controller/Inst_ov7670_registers/sreg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1501.145 ; gain = 229.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 1501.145 ; gain = 229.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 1501.145 ; gain = 229.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 1501.145 ; gain = 229.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 1501.145 ; gain = 229.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 1501.145 ; gain = 229.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 1501.145 ; gain = 229.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |frame_buffer  |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |frame_buffer |     1|
+|2     |BUFG         |     4|
+|3     |CARRY4       |    21|
+|4     |LUT1         |    30|
+|5     |LUT2         |    28|
+|6     |LUT3         |    62|
+|7     |LUT4         |    54|
+|8     |LUT5         |    22|
+|9     |LUT6         |    48|
+|10    |MMCME2_ADV   |     1|
+|11    |RAMB18E1     |     1|
+|12    |FDRE         |   204|
+|13    |FDSE         |     2|
+|14    |LD           |    19|
+|15    |IBUF         |    17|
+|16    |IBUFG        |     1|
+|17    |OBUF         |    19|
+|18    |OBUFT        |     1|
++------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 1501.145 ; gain = 229.402
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1807 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 1501.145 ; gain = 146.344
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 1501.145 ; gain = 229.402
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1501.145 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 43 Unisim elements for replacement
+WARNING: [Netlist 29-432] The IBUFG primitive 'Inst_clocking/clkin1_buf' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1501.145 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 20 instances were transformed.
+  IBUFG => IBUF: 1 instance 
+  LD => LDCE: 19 instances
+
+Synth Design complete, checksum: c9228d77
+INFO: [Common 17-83] Releasing license: Synthesis
+69 Infos, 226 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 1501.145 ; gain = 229.402
+INFO: [Common 17-1381] The checkpoint 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/top_level.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_level_utilization_synth.rpt -pb top_level_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 19 13:05:10 2024...

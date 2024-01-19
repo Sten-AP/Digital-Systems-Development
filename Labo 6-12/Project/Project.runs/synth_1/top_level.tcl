@@ -70,13 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 3
-set_param synth.incrementalSynthesisCache C:/Users/stenh/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-60076-PC-Sten/incrSyn
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {Synth 8-9493}  -string {{ERROR: [Synth 8-9493] found '0' definitions of operator "*", cannot determine exact overloaded matching definition for "*" [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/Inst_video_compression.vhd:54]}}  -suppress 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-3
@@ -95,7 +90,6 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  {D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/Inst_video_compression.vhd}
   {D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd}
   {D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/address_Generator.vhd}
   {D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd}
@@ -126,8 +120,6 @@ read_xdc {{D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Proj
 set_property used_in_implementation false [get_files {{D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/constrs_1/imports/new/basys3_xdc.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
-
-read_checkpoint -auto_incremental -incremental D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/utils_1/imports/synth_1/top_level.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

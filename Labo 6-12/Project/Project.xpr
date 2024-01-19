@@ -85,12 +85,6 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/new/Inst_video_compression.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/RGB.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="C:/Users/admin/Downloads/Ov7670_fr_zedboard/ov7670_fr/RGB.vhd"/>
@@ -189,6 +183,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/Inst_video_compression.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/i3c2.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -239,14 +240,6 @@
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
       <Filter Type="Utils"/>
-      <File Path="$PSRCDIR/utils_1/imports/synth_1/top_level.dcp">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedInSteps" Val="synth_1"/>
-          <Attr Name="AutoDcp" Val="1"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
@@ -295,18 +288,16 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="19">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-3" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_level.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-3" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2017" CtrlBit="true">
         <ReportConfig DisplayName="synth_1_synth_report_utilization_0" Name="synth_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="top_level_utilization_synth.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value="top_level_utilization_synth.pb"/>
         </ReportConfig>
         <ReportConfig DisplayName="synth_1_synth_synthesis_report_0" Name="synth_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="top_level.vds">
           <ReportConfigOption Name="dummy_option" Type="string"/>
@@ -327,9 +318,7 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-3" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../basys3_ov7670_v1/basys3_ov7670_v1.srcs/utils_1/imports/impl_1" AutoRQSDir="$PPRDIR/../basys3_ov7670_v1/basys3_ov7670_v1.srcs/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -349,8 +338,8 @@
         </ReportConfig>
         <ReportConfig DisplayName="impl_1_opt_report_drc_0" Name="impl_1_opt_report_drc_0" Spec="report_drc" RunStep="opt_design" ReportFile="top_level_drc_opted.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value="top_level_drc_opted.pb"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value="top_level_drc_opted.rpx"/>
         </ReportConfig>
         <ReportConfig DisplayName="impl_1_opt_report_timing_summary_0" Name="impl_1_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="opt_design" Version="1" Minor="0" IsDisabled="true">
           <ReportConfigOption Name="max_paths" Type="" Value="10"/>
@@ -367,7 +356,7 @@
         </ReportConfig>
         <ReportConfig DisplayName="impl_1_place_report_utilization_0" Name="impl_1_place_report_utilization_0" Spec="report_utilization" RunStep="place_design" ReportFile="top_level_utilization_placed.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value="top_level_utilization_placed.pb"/>
         </ReportConfig>
         <ReportConfig DisplayName="impl_1_place_report_control_sets_0" Name="impl_1_place_report_control_sets_0" Spec="report_control_sets" RunStep="place_design" ReportFile="top_level_control_sets_placed.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="verbose" Type="" Value="true"/>
@@ -395,27 +384,27 @@
         </ReportConfig>
         <ReportConfig DisplayName="impl_1_route_report_drc_0" Name="impl_1_route_report_drc_0" Spec="report_drc" RunStep="route_design" ReportFile="top_level_drc_routed.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value="top_level_drc_routed.pb"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value="top_level_drc_routed.rpx"/>
         </ReportConfig>
         <ReportConfig DisplayName="impl_1_route_report_methodology_0" Name="impl_1_route_report_methodology_0" Spec="report_methodology" RunStep="route_design" ReportFile="top_level_methodology_drc_routed.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value="top_level_methodology_drc_routed.pb"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value="top_level_methodology_drc_routed.rpx"/>
         </ReportConfig>
         <ReportConfig DisplayName="impl_1_route_report_power_0" Name="impl_1_route_report_power_0" Spec="report_power" RunStep="route_design" ReportFile="top_level_power_routed.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value="top_level_power_summary_routed.pb"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value="top_level_power_routed.rpx"/>
         </ReportConfig>
         <ReportConfig DisplayName="impl_1_route_report_route_status_0" Name="impl_1_route_report_route_status_0" Spec="report_route_status" RunStep="route_design" ReportFile="top_level_route_status.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value="top_level_route_status.pb"/>
         </ReportConfig>
         <ReportConfig DisplayName="impl_1_route_report_timing_summary_0" Name="impl_1_route_report_timing_summary_0" Spec="report_timing_summary" RunStep="route_design" ReportFile="top_level_timing_summary_routed.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="max_paths" Type="" Value="10"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value="top_level_timing_summary_routed.pb"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value="top_level_timing_summary_routed.rpx"/>
         </ReportConfig>
         <ReportConfig DisplayName="impl_1_route_report_incremental_reuse_0" Name="impl_1_route_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="route_design" ReportFile="top_level_incremental_reuse_routed.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
