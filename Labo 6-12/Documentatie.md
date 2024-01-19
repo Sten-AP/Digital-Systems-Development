@@ -182,10 +182,10 @@ end Behavioral;
 
 ### 5.2 Resultaat
 
-<div style="text-align:center; height:300px">
+<p align="center">
+  <img src="Afbeeldingen/Normaal.jpg" alt="Video normaal" height="300px">
+</p>
 
-![Normaal](Afbeeldingen/Normaal.jpg)
-</div>
 
 
 ## 6. Filters
