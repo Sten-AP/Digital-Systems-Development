@@ -182,7 +182,11 @@ end Behavioral;
 
 ### 5.2 Resultaat
 
-![Normaal](Afbeeldingen/Normaal.jpg)
+<div style="text-align:center">
+
+![Normaal](Afbeeldingen/Normaal.jpg){ height=300px }
+
+</div>
 
 
 ## 6. Filters
