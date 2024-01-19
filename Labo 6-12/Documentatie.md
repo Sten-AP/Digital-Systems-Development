@@ -310,7 +310,7 @@ filters: process(Din, Nblank)
 begin
     if Nblank = '1' then
         if switch = '1' then
-            -- Collorless video
+            -- Colourless video
             for i in 0 to 4095 loop
                 lut(i) <= std_logic_vector(to_unsigned(i, 8));
             end loop;
@@ -334,8 +334,8 @@ end Behavioral;
 
 ## Bronnen
 
-[FPGA4Student: videobeelden via VGA](https://www.fpga4student.com/2018/08/basys-3-fpga-ov7670-camera.html)
-[Startingelectronics: inverteerde kleuren filter](https://startingelectronics.com/software/VHDL-CPLD-course/tut1-inverter-buffer/)
-[Electronics-stackexchange: zwart en wit filter](https://electronics.stackexchange.com/questions/481870/how-to-implement-vga-controller-for-changing-background-color-in-vhdl)
-[Support-xilinx: kleurloos filter](https://support.xilinx.com/s/question/0D52E00006iHtaVSAS/lens-distortion-correction-in-fpga-how-to-get-started-vhdl-vivado?language=zh_CN)
-[Esd-cs: kleurloos filter](http://esd.cs.ucr.edu/labs/tutorial/)
+[FPGA4Student: videobeelden via VGA](https://www.fpga4student.com/2018/08/basys-3-fpga-ov7670-camera.html)</br>
+[Startingelectronics: inverteerde kleuren filter](https://startingelectronics.com/software/VHDL-CPLD-course/tut1-inverter-buffer/)</br>
+[Electronics-stackexchange: zwart en wit filter](https://electronics.stackexchange.com/questions/481870/how-to-implement-vga-controller-for-changing-background-color-in-vhdl)</br>
+[Support-xilinx: kleurloos filter](https://support.xilinx.com/s/question/0D52E00006iHtaVSAS/lens-distortion-correction-in-fpga-how-to-get-started-vhdl-vivado?language=zh_CN)</br>
+[Esd-cs: kleurloos filter](http://esd.cs.ucr.edu/labs/tutorial/)</br>
