@@ -9,21 +9,21 @@ Hulsbergen Sten  - 3ITIOT
 [3. Testplan](##-3-Testplan)</br>
 [4. Camera](##-4-Camera)</br>
 [5. VGA](##-5-VGA)</br>
-&emsp;[5.1. Code](###-51-Code)</br>
-&emsp;[5.2. Resultaat](###-52-Resultaat)</br>
+&emsp;[5.1 Code](###-51-Code)</br>
+&emsp;[5.2 Resultaat](###-52-Resultaat)</br>
 [6. Filters](##-6-Filters)</br>
-&emsp;[6.1. Geinverteerd](###-61-Geinverteerd)</br>
-&emsp;&emsp;[6.1.1. Code](####-611-Code)</br>
-&emsp;&emsp;[6.1.2. Resultaat](####-612-Resultaat)</br>
-&emsp;[6.2. Zwart en wit](###-62-Zwart-en-wit)</br>
-&emsp;&emsp;[6.2.1. Code](####-621-Code)</br>
-&emsp;&emsp;[6.2.2. Resultaat](####-622-Resultaat)</br>
-&emsp;[6.3. Kleurloos](###-63-Kleurloos)</br>
-&emsp;&emsp;[6.3.1. Code](####-631-Code)</br>
-&emsp;&emsp;[6.3.2. Resultaat](####-632-Resultaat)</br>
+&emsp;[6.1 Geinverteerd](###-61-Geinverteerd)</br>
+&emsp;&emsp;[6.1.1 Code](####-611-Code)</br>
+&emsp;&emsp;[6.1.2 Resultaat](####-612-Resultaat)</br>
+&emsp;[6.2 Zwart en wit](###-62-Zwart-en-wit)</br>
+&emsp;&emsp;[6.2.1 Code](####-621-Code)</br>
+&emsp;&emsp;[6.2.2 Resultaat](####-622-Resultaat)</br>
+&emsp;[6.3 Kleurloos](###-63-Kleurloos)</br>
+&emsp;&emsp;[6.3.1 Code](####-631-Code)</br>
+&emsp;&emsp;[6.3.2 Resultaat](####-632-Resultaat)</br>
 [7. Compressie](##-7-Compressie)</br>
-&emsp;[7.1. Code](###-71-Code)</br>
-&emsp;[7.2. Resultaat](###-72-Resultaat)</br>
+&emsp;[7.1 Code](###-71-Code)</br>
+&emsp;[7.2 Resultaat](###-72-Resultaat)</br>
 [8. Datasheets](##-8-Datasheets)</br>
 [9. Bronnen](##-9-Bronnen)
 
@@ -61,7 +61,7 @@ Voor de code van de camera heb ik gebruik gemaakt van de bron *FPGA4Students*, d
 
 Voor de code om de VGA aan te sturen heb ik ook gebruik gemaakt van de bron *FPGA4Students*, maar deze is een groot deel aangepast om te kunnen werken met de nodige filters. De code voor het uitsturen van de kleuren is als volgt:
 
-### 5.1. Code
+### 5.1 Code
 
 ```
 library IEEE;
@@ -180,14 +180,14 @@ end process;
 end Behavioral;
 ```
 
-### 5.2. Resultaat
+### 5.2 Resultaat
 
 ![Normaal](Afbeeldingen/Normaal.jpg)
 
 
 ## 6. Filters
 
-### 6.1. Geinverteerd
+### 6.1 Geinverteerd
 
 De kleuren inverteren is niet moeilijk, hierbij moest alleen `not` geplaatst worden voor de kleuren om te draaien. Hierbij heb ik extra lijnen geplaatst waarbij de kleuren geschaald worden naar 255. Deze waarden worden vervolgens geplaatst op de RGB-lijnen van de VGA.
 
@@ -337,9 +337,9 @@ end Behavioral;
 
 Dit is het moeilijkste onderdeel van dit project. Veel opzoekwerk komt veel uit op betaalde IP-blocks wat natuurlijk niet goed is. Informatie over het zelf maken van een compressieblock is ook zeer gering, dit onderdeel gaat net wel of net niet klaar zijn.
 
-### 7.1. Code
+### 7.1 Code
 
-### 7.2. Resultaat
+### 7.2 Resultaat
 
 ## 8. Datasheets
 
