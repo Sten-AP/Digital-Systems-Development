@@ -1,0 +1,48 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xA400B5B8A4F135F7",
+      "device": "xc7a35tcpg236-3",
+      "gen_directory": "../../../../Project.gen/sources_1/bd/Video_compression",
+      "name": "Video_compression",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1"
+    },
+    "design_tree": {
+      "convolution_0": "",
+      "xlconcat_0": ""
+    },
+    "components": {
+      "convolution_0": {
+        "vlnv": "xilinx.com:ip:convolution:9.0",
+        "xci_name": "Video_compression_convolution_0_0",
+        "xci_path": "ip\\Video_compression_convolution_0_0\\Video_compression_convolution_0_0.xci",
+        "inst_hier_path": "convolution_0",
+        "parameters": {
+          "Input_Rate": {
+            "value": "1"
+          },
+          "Output_Rate": {
+            "value": "6"
+          },
+          "Puncture_Code0": {
+            "value": "0"
+          },
+          "Puncture_Code1": {
+            "value": "0"
+          },
+          "Punctured": {
+            "value": "false"
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "Video_compression_xlconcat_0_0",
+        "xci_path": "ip\\Video_compression_xlconcat_0_0\\Video_compression_xlconcat_0_0.xci",
+        "inst_hier_path": "xlconcat_0"
+      }
+    }
+  }
+}

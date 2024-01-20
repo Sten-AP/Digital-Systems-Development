@@ -99,9 +99,9 @@ architecture Behavioral of top_level is
 	PORT(
 		Din : IN std_logic_vector(11 downto 0);
 		Nblank : IN std_logic;          
-		R_out : OUT std_logic_vector(7 downto 0);
-		G_out : OUT std_logic_vector(7 downto 0);
-		B_out : OUT std_logic_vector(7 downto 0);
+		R_out : OUT std_logic_vector(3 downto 0);
+		G_out : OUT std_logic_vector(3 downto 0);
+		B_out : OUT std_logic_vector(3 downto 0);
 		filter_switch_inverted : IN std_logic;
 		filter_switch_b_and_w : IN std_logic;
 		filter_switch_colourless : IN std_logic;
@@ -136,18 +136,6 @@ architecture Behavioral of top_level is
 		);
 	END COMPONENT;
 
-    COMPONENT video_compression
-        PORT (
-            clk : IN STD_LOGIC;
-            reset : IN STD_LOGIC;
-            input_pixel : IN STD_LOGIC;
-            compression_switch : IN STD_LOGIC;
-            compressed_data : out STD_LOGIC_VECTOR (11 downto 0)
-        );
-    END COMPONENT;
-    
-    signal compression_switch_temp : STD_LOGIC;
-
     signal clk_camera : std_logic;
     signal clk_vga    : std_logic;
     signal wren       : std_logic_vector(0 downto 0);
@@ -162,7 +150,7 @@ architecture Behavioral of top_level is
     signal rdaddress  : std_logic_vector(18 downto 0);
     signal rddata     : std_logic_vector(11 downto 0);
 --    signal rddata_out     : std_logic_vector(11 downto 0);
-    signal red,green,blue : std_logic_vector(7 downto 0);
+    signal red,green,blue : std_logic_vector(3 downto 0);
     signal activeArea : std_logic;
    
     signal rez_160x120 : std_logic;
@@ -171,9 +159,9 @@ architecture Behavioral of top_level is
     signal rd_addr,wr_addr  : std_logic_vector(16 downto 0);
     
 begin
-    vga_r <= red(7 downto 4);
-    vga_g <= green(7 downto 4);
-    vga_b <= blue(7 downto 4);
+    vga_r <= red(3 downto 0);
+    vga_g <= green(3 downto 0);
+    vga_b <= blue(3 downto 0);
    
     rez_160x120 <= btnl;
     rez_320x240 <= btnr;
@@ -271,15 +259,5 @@ begin
         vsync  => vsync,
 		address => rdaddress
 	);
-
---    Inst_video_compression: video_compression  PORT MAP(
---        clk => clk_vga,
---        reset => btnc,
---        input_pixel => rddata(0),
---        compression_switch => compression_switch,
---        compressed_data => rddata_out
---    );
-
-
 end Behavioral;
 

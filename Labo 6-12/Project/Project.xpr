@@ -85,6 +85,12 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/new/Inst_video_compression.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/RGB.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="C:/Users/admin/Downloads/Ov7670_fr_zedboard/ov7670_fr/RGB.vhd"/>
@@ -179,13 +185,6 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="C:/Users/admin/Downloads/Ov7670_fr_zedboard/ov7670_fr/top_level.vhd"/>
           <Attr Name="ImportTime" Val="1374658043"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/Inst_video_compression.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>

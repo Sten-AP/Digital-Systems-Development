@@ -5,32 +5,27 @@ use ieee.numeric_std.all;
 
 
 entity filter_colourless is
-    Port ( 
-    		switch : in STD_LOGIC;
-            Din 	: in	STD_LOGIC_VECTOR (11 downto 0);
-		    Nblank : in	STD_LOGIC;
-            R_colourless, G_colourless, B_colourless : out STD_LOGIC_VECTOR (7 downto 0)
-          );
+    Port (
+        Din 	: in	STD_LOGIC_VECTOR (11 downto 0);
+        R_colourless, G_colourless, B_colourless : out STD_LOGIC_VECTOR (3 downto 0)
+    );
 end filter_colourless;
 
 architecture Behavioral of filter_colourless is
-    type lut_type is array (0 to 4095) of std_logic_vector(7 downto 0);
-    signal lut : lut_type := (others => "00000000");
+    type lut_type is array (0 to 6138) of std_logic_vector(3 downto 0);
+    signal lut : lut_type := (others => "0000");
 begin
-    
-filters: process(Din, Nblank)
-begin
-    if Nblank = '1' then
-        if switch = '1' then
-            -- Colourless video
-            for i in 0 to 4095 loop
-                lut(i) <= std_logic_vector(to_unsigned(i, 8));
-            end loop;
-          
-            R_colourless <= lut(to_integer(unsigned(Din)));
-            G_colourless <= lut(to_integer(unsigned(Din)));
-            B_colourless <= lut(to_integer(unsigned(Din)));
-        end if;
-    end if;
-end process;
+
+    filters: process(Din)
+    begin
+        -- Colourless video
+        for i in 0 to 6138 loop
+            -- Scale input to a range 0 to 15
+            lut(i) <= std_logic_vector(to_unsigned(i * 15 / 6138, 4));
+        end loop;
+
+        R_colourless <= lut(to_integer(unsigned(Din)));
+        G_colourless <= lut(to_integer(unsigned(Din)));
+        B_colourless <= lut(to_integer(unsigned(Din)));
+    end process;
 end Behavioral;

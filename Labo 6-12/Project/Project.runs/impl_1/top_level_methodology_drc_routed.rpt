@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Fri Jan 19 13:06:15 2024
+| Date         : Sat Jan 20 14:40:17 2024
 | Host         : PC-Sten running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_level_methodology_drc_routed.rpt -pb top_level_methodology_drc_routed.pb -rpx top_level_methodology_drc_routed.rpx
 | Design       : top_level
@@ -23,13 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 122
+             Violations found: 115
 +-----------+------------------+----------------------------------+------------+
 | Rule      | Severity         | Description                      | Violations |
 +-----------+------------------+----------------------------------+------------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell      | 101        |
 | HPDR-1    | Warning          | Port pin direction inconsistency | 1          |
-| TIMING-20 | Warning          | Non-clocked latch                | 19         |
+| TIMING-20 | Warning          | Non-clocked latch                | 12         |
 | LATCH-1   | Advisory         | Existing latches in the design   | 1          |
 +-----------+------------------+----------------------------------+------------+
 
@@ -547,102 +547,67 @@ Related violations: <none>
 
 TIMING-20#1 Warning
 Non-clocked latch  
-The latch Inst_RGB/Inst_filter_b_and_w/R_b_and_w_reg[7] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_b_and_w/R_b_and_w_reg[7]/G is not reached by a timing clock
+The latch Inst_RGB/Dout_reg[0] cannot be properly analyzed as its control pin Inst_RGB/Dout_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#2 Warning
 Non-clocked latch  
-The latch Inst_RGB/Inst_filter_colourless/R_colourless_reg[4] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_colourless/R_colourless_reg[4]/G is not reached by a timing clock
+The latch Inst_RGB/Dout_reg[10] cannot be properly analyzed as its control pin Inst_RGB/Dout_reg[10]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#3 Warning
 Non-clocked latch  
-The latch Inst_RGB/Inst_filter_colourless/R_colourless_reg[5] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_colourless/R_colourless_reg[5]/G is not reached by a timing clock
+The latch Inst_RGB/Dout_reg[11] cannot be properly analyzed as its control pin Inst_RGB/Dout_reg[11]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#4 Warning
 Non-clocked latch  
-The latch Inst_RGB/Inst_filter_colourless/R_colourless_reg[6] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_colourless/R_colourless_reg[6]/G is not reached by a timing clock
+The latch Inst_RGB/Dout_reg[1] cannot be properly analyzed as its control pin Inst_RGB/Dout_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#5 Warning
 Non-clocked latch  
-The latch Inst_RGB/Inst_filter_colourless/R_colourless_reg[7] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_colourless/R_colourless_reg[7]/G is not reached by a timing clock
+The latch Inst_RGB/Dout_reg[2] cannot be properly analyzed as its control pin Inst_RGB/Dout_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#6 Warning
 Non-clocked latch  
-The latch Inst_RGB/Inst_filter_colourless/lut_reg[128][7] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_colourless/lut_reg[128][7]/G is not reached by a timing clock
+The latch Inst_RGB/Dout_reg[3] cannot be properly analyzed as its control pin Inst_RGB/Dout_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#7 Warning
 Non-clocked latch  
-The latch Inst_RGB/Inst_filter_colourless/lut_reg[255][7] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_colourless/lut_reg[255][7]/G is not reached by a timing clock
+The latch Inst_RGB/Dout_reg[4] cannot be properly analyzed as its control pin Inst_RGB/Dout_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#8 Warning
 Non-clocked latch  
-The latch Inst_RGB/Inst_filter_inverted/B_inverted_reg[4] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_inverted/B_inverted_reg[4]/G is not reached by a timing clock
+The latch Inst_RGB/Dout_reg[5] cannot be properly analyzed as its control pin Inst_RGB/Dout_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#9 Warning
 Non-clocked latch  
-The latch Inst_RGB/Inst_filter_inverted/B_inverted_reg[5] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_inverted/B_inverted_reg[5]/G is not reached by a timing clock
+The latch Inst_RGB/Dout_reg[6] cannot be properly analyzed as its control pin Inst_RGB/Dout_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#10 Warning
 Non-clocked latch  
-The latch Inst_RGB/Inst_filter_inverted/B_inverted_reg[6] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_inverted/B_inverted_reg[6]/G is not reached by a timing clock
+The latch Inst_RGB/Dout_reg[7] cannot be properly analyzed as its control pin Inst_RGB/Dout_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#11 Warning
 Non-clocked latch  
-The latch Inst_RGB/Inst_filter_inverted/B_inverted_reg[7] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_inverted/B_inverted_reg[7]/G is not reached by a timing clock
+The latch Inst_RGB/Dout_reg[8] cannot be properly analyzed as its control pin Inst_RGB/Dout_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#12 Warning
 Non-clocked latch  
-The latch Inst_RGB/Inst_filter_inverted/G_inverted_reg[4] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_inverted/G_inverted_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#13 Warning
-Non-clocked latch  
-The latch Inst_RGB/Inst_filter_inverted/G_inverted_reg[5] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_inverted/G_inverted_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#14 Warning
-Non-clocked latch  
-The latch Inst_RGB/Inst_filter_inverted/G_inverted_reg[6] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_inverted/G_inverted_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#15 Warning
-Non-clocked latch  
-The latch Inst_RGB/Inst_filter_inverted/G_inverted_reg[7] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_inverted/G_inverted_reg[7]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#16 Warning
-Non-clocked latch  
-The latch Inst_RGB/Inst_filter_inverted/R_inverted_reg[4] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_inverted/R_inverted_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#17 Warning
-Non-clocked latch  
-The latch Inst_RGB/Inst_filter_inverted/R_inverted_reg[5] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_inverted/R_inverted_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#18 Warning
-Non-clocked latch  
-The latch Inst_RGB/Inst_filter_inverted/R_inverted_reg[6] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_inverted/R_inverted_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#19 Warning
-Non-clocked latch  
-The latch Inst_RGB/Inst_filter_inverted/R_inverted_reg[7] cannot be properly analyzed as its control pin Inst_RGB/Inst_filter_inverted/R_inverted_reg[7]/G is not reached by a timing clock
+The latch Inst_RGB/Dout_reg[9] cannot be properly analyzed as its control pin Inst_RGB/Dout_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 19 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 12 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

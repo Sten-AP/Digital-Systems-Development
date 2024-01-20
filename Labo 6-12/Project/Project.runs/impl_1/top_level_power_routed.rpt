@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date             : Fri Jan 19 13:06:16 2024
+| Date             : Sat Jan 20 14:40:18 2024
 | Host             : PC-Sten running 64-bit major release  (build 9200)
 | Command          : report_power -file top_level_power_routed.rpt -pb top_level_power_summary_routed.pb -rpx top_level_power_routed.rpx
 | Design           : top_level
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.189        |
+| Total On-Chip Power (W)  | 0.190        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.116        |
+| Dynamic (W)              | 0.117        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 99.1         |
-| Junction Temperature (C) | 25.9         |
+| Max Ambient (C)          | 99.0         |
+| Junction Temperature (C) | 26.0         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,19 +53,19 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |      876 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      334 |     20800 |            1.61 |
+| Slice Logic    |    <0.001 |      918 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      377 |     20800 |            1.81 |
 |   CARRY4       |    <0.001 |       21 |      8150 |            0.26 |
-|   Register     |    <0.001 |      240 |     41600 |            0.58 |
+|   Register     |    <0.001 |      233 |     41600 |            0.56 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   F7/F8 Muxes  |    <0.001 |       36 |     32600 |            0.11 |
-|   Others       |     0.000 |      145 |       --- |             --- |
-| Signals        |     0.001 |      881 |       --- |             --- |
+|   Others       |     0.000 |      140 |       --- |             --- |
+| Signals        |     0.001 |      927 |       --- |             --- |
 | Block RAM      |     0.003 |     44.5 |        50 |           89.00 |
 | MMCM           |     0.106 |        1 |         5 |           20.00 |
-| I/O            |     0.005 |       38 |       106 |           35.85 |
+| I/O            |     0.005 |       39 |       106 |           36.79 |
 | Static Power   |     0.073 |          |           |                 |
-| Total          |     0.189 |          |           |                 |
+| Total          |     0.190 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.016 |       0.006 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.017 |       0.006 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.071 |       0.059 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -147,7 +147,7 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| top_level              |     0.116 |
+| top_level              |     0.117 |
 |   Inst_clocking        |     0.106 |
 |   Inst_frame_buffer    |     0.003 |
 |     U0                 |     0.003 |
