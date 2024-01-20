@@ -73,6 +73,8 @@ set_property src_info {type:XDC file:1 line:104 export:INPUT save:INPUT read:REA
 set_property PACKAGE_PIN R18 [get_ports ov7670_sioc]
 set_property src_info {type:XDC file:1 line:108 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN V17 [get_ports {compression_switch}]
+set_property src_info {type:XDC file:1 line:110 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN V16 [get_ports {filter_switch_brightness}]
 set_property src_info {type:XDC file:1 line:134 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN U1 [get_ports {filter_switch_colourless}]
 set_property src_info {type:XDC file:1 line:136 export:INPUT save:INPUT read:READ} [current_design]

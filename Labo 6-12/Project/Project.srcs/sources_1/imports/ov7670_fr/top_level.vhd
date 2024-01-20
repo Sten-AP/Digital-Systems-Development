@@ -27,6 +27,7 @@ entity top_level is
            filter_switch_inverted : in STD_LOGIC;
            filter_switch_b_and_w : in STD_LOGIC;
            filter_switch_colourless: in STD_LOGIC;
+           filter_switch_brightness: in std_logic;
            
            compression_switch : in STD_LOGIC
            );
@@ -105,7 +106,8 @@ architecture Behavioral of top_level is
 		filter_switch_inverted : IN std_logic;
 		filter_switch_b_and_w : IN std_logic;
 		filter_switch_colourless : IN std_logic;
-		compression_switch: IN std_logic
+		compression_switch: IN std_logic;
+		filter_switch_brightness: in std_logic
 		);
 	END COMPONENT;
 
@@ -149,7 +151,7 @@ architecture Behavioral of top_level is
    
     signal rdaddress  : std_logic_vector(18 downto 0);
     signal rddata     : std_logic_vector(11 downto 0);
---    signal rddata_out     : std_logic_vector(11 downto 0);
+
     signal red,green,blue : std_logic_vector(3 downto 0);
     signal activeArea : std_logic;
    
@@ -248,7 +250,8 @@ begin
 		filter_switch_inverted => filter_switch_inverted,
 		filter_switch_b_and_w => filter_switch_b_and_w,
 		filter_switch_colourless => filter_switch_colourless,
-		compression_switch => compression_switch
+		compression_switch => compression_switch,
+		filter_switch_brightness => filter_switch_brightness
 	);
 
 	Inst_Address_Generator: Address_Generator PORT MAP(

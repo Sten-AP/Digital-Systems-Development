@@ -59,7 +59,14 @@ Voor de code van de camera heb ik gebruik gemaakt van de bron *FPGA4Students*, d
 
 ## 5. VGA
 
-Voor de code om de VGA aan te sturen heb ik ook gebruik gemaakt van de bron *FPGA4Students*, maar deze is een groot deel aangepast om te kunnen werken met de nodige filters. De code voor het uitsturen van de kleuren is als volgt:
+Voor de code om de VGA aan te sturen heb ik ook gebruik gemaakt van de bron *FPGA4Students*, maar deze is een groot deel aangepast om te kunnen werken met de nodige filters.
+
+Zoals in de onderstaande afbeelding te zien is, worden de pinnen aangestuurd. De rood, groen en blauwe waarden worden in 4 bits verstuurd vanuit de FPGA. De H-sync en V-sync dienen voor horizontaal en verticaal te synchroniseren.
+
+<p align="center">
+    <img src="Afbeeldingen/VGA.ppm" alt="VGA" height="400px">
+</p>
+
 
 ### 5.1 Code
 

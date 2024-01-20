@@ -9,8 +9,9 @@ entity RGB is
         filter_switch_inverted : in STD_LOGIC;
         filter_switch_b_and_w : in STD_LOGIC;
         filter_switch_colourless : in STD_LOGIC;
+        filter_switch_brightness: in std_logic;
         compression_switch : in std_logic;
-
+        
         Din : in STD_LOGIC_VECTOR (11 downto 0);
         Nblank : in	STD_LOGIC;
         R_out, G_out, B_out : out STD_LOGIC_VECTOR (3 downto 0));
@@ -19,6 +20,7 @@ end RGB;
 architecture Behavioral of RGB is
     signal Dout : STD_LOGIC_VECTOR (11 downto 0);
     signal Dout_compressed : STD_LOGIC_VECTOR (11 downto 0);
+    signal Dout_brightened : STD_LOGIC_VECTOR (11 downto 0);
 
     signal R_inverted, G_inverted, B_inverted : STD_LOGIC_VECTOR (3 downto 0);
     signal R_b_and_w, G_b_and_w, B_b_and_w : STD_LOGIC_VECTOR (3 downto 0);
@@ -28,6 +30,14 @@ architecture Behavioral of RGB is
         PORT (
             comp_in   : in STD_LOGIC_VECTOR (11 downto 0);
             comp_out  : out STD_LOGIC_VECTOR (11 downto 0)
+        );
+    END COMPONENT;
+
+    COMPONENT filter_brightness
+        PORT (
+            Din      : in STD_LOGIC_VECTOR (11 downto 0);
+            Dout     : out STD_LOGIC_VECTOR (11 downto 0);
+            BrightnessLevel: in integer range 0 to 255
         );
     END COMPONENT;
 
@@ -80,12 +90,19 @@ begin
             B_colourless => B_colourless
         );
 
+    Inst_brightness_filter: filter_brightness PORT MAP(
+        Din => Dout,
+        Dout => Dout_brightened,
+        BrightnessLevel => 50
+    );
 
     filters: process(filter_switch_inverted, filter_switch_b_and_w, filter_switch_colourless, Dout, Dout_compressed, Din)
     begin
         if Nblank = '1' then
             if compression_switch = '1' then
                 Dout <= Dout_compressed;
+            elsif filter_switch_brightness = '1' then
+                Dout <= Dout_brightened;
             else
                 Dout <= Din;
             end if;
@@ -104,7 +121,7 @@ begin
                 B_out <= B_colourless;
             else
                 -- Normal video
-                R_out <=  Dout(11 downto 8);
+                R_out <= Dout(11 downto 8);
                 G_out <= Dout(7 downto 4);
                 B_out <= Dout(3 downto 0);
             end if;
