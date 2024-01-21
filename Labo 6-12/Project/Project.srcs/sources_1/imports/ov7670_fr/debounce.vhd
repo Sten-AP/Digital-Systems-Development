@@ -1,9 +1,3 @@
-----------------------------------------------------------------------------------
--- Engineer: Mike Field <hamster@snap.net.nz>
--- 
--- Description: Convert the push button to a 1PPS that can be used to restart
---              camera initialisation
-----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;

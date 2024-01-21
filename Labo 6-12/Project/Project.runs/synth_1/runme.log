@@ -17,58 +17,60 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-3
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 40700
+INFO: [Synth 8-7075] Helper process launched with PID 28540
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1272.055 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1272.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top_level' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:36]
-INFO: [Synth 8-3491] module 'clocking' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd:75' bound to instance 'Inst_clocking' of component 'clocking' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:171]
-INFO: [Synth 8-638] synthesizing module 'clocking' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd:85]
-INFO: [Synth 8-113] binding component instance 'clkin1_buf' to cell 'IBUFG' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd:119]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'd:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v:69' bound to instance 'Inst_clocks' of component 'clk_wiz_0' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:185]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [d:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v:69]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [d:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:69]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:55203]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (0#1) [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:55203]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:63509]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKFBOUT_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
 	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
-	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 40.000000 - type: double 
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKOUT0_USE_FINE_PS bound to: 0 - type: bool 
-	Parameter CLKOUT1_DIVIDE bound to: 40 - type: integer 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 20 - type: integer 
 	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
 	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKOUT1_USE_FINE_PS bound to: 0 - type: bool 
-	Parameter CLKOUT4_CASCADE bound to: 0 - type: bool 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
 	Parameter COMPENSATION bound to: ZHOLD - type: string 
 	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
-	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
-	Parameter STARTUP_WAIT bound to: 0 - type: bool 
-INFO: [Synth 8-113] binding component instance 'mmcm_adv_inst' to cell 'MMCME2_ADV' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd:130]
-INFO: [Synth 8-113] binding component instance 'clkf_buf' to cell 'BUFG' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd:193]
-INFO: [Synth 8-113] binding component instance 'clkout1_buf' to cell 'BUFG' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd:199]
-INFO: [Synth 8-113] binding component instance 'clkout2_buf' to cell 'BUFG' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd:206]
-INFO: [Synth 8-256] done synthesizing module 'clocking' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/clocking.vhd:85]
-INFO: [Synth 8-3491] module 'VGA' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/vga.vhd:10' bound to instance 'Inst_VGA' of component 'VGA' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:181]
-INFO: [Synth 8-638] synthesizing module 'VGA' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/vga.vhd:21]
-INFO: [Synth 8-256] done synthesizing module 'VGA' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/vga.vhd:21]
-INFO: [Synth 8-3491] module 'debounce' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/debounce.vhd:11' bound to instance 'Inst_debounce' of component 'debounce' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:193]
-INFO: [Synth 8-638] synthesizing module 'debounce' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/debounce.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'debounce' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/debounce.vhd:17]
-INFO: [Synth 8-3491] module 'ov7670_controller' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_controller.vhd:11' bound to instance 'Inst_ov7670_controller' of component 'ov7670_controller' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:199]
-INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_controller.vhd:23]
-INFO: [Synth 8-3491] module 'i2c_sender' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/i2c_sender.vhd:11' bound to instance 'Inst_i2c_sender' of component 'i2c_sender' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_controller.vhd:58]
-INFO: [Synth 8-638] synthesizing module 'i2c_sender' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/i2c_sender.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/i2c_sender.vhd:22]
-INFO: [Synth 8-3491] module 'ov7670_registers' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.vhd:12' bound to instance 'Inst_ov7670_registers' of component 'ov7670_registers' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_controller.vhd:73]
-INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.vhd:20]
-INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.vhd:20]
-INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_controller.vhd:23]
-INFO: [Synth 8-3491] module 'frame_buffer' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/.Xil/Vivado-57420-PC-Sten/realtime/frame_buffer_stub.v:5' bound to instance 'Inst_frame_buffer' of component 'frame_buffer' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:222]
-INFO: [Synth 8-6157] synthesizing module 'frame_buffer' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/.Xil/Vivado-57420-PC-Sten/realtime/frame_buffer_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'frame_buffer' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/.Xil/Vivado-57420-PC-Sten/realtime/frame_buffer_stub.v:5]
-INFO: [Synth 8-3491] module 'ov7670_capture' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_capture.vhd:17' bound to instance 'Inst_ov7670_capture' of component 'ov7670_capture' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:232]
-INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_capture.vhd:29]
-INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_capture.vhd:29]
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:63509]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0_clk_wiz' (0#1) [d:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [d:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v:69]
+INFO: [Synth 8-3491] module 'VGA' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/vga.vhd:7' bound to instance 'Inst_VGA' of component 'VGA' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:192]
+INFO: [Synth 8-638] synthesizing module 'VGA' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/vga.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/vga.vhd:18]
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/debounce.vhd:5' bound to instance 'Inst_debounce' of component 'debounce' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:204]
+INFO: [Synth 8-638] synthesizing module 'debounce' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/debounce.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/debounce.vhd:11]
+INFO: [Synth 8-3491] module 'ov7670_controller' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_controller.vhd:6' bound to instance 'Inst_ov7670_controller' of component 'ov7670_controller' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:210]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_controller.vhd:18]
+INFO: [Synth 8-3491] module 'i2c_sender' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/i2c_sender.vhd:6' bound to instance 'Inst_i2c_sender' of component 'i2c_sender' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_controller.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/i2c_sender.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/i2c_sender.vhd:17]
+INFO: [Synth 8-3491] module 'ov7670_registers' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.vhd:6' bound to instance 'Inst_ov7670_registers' of component 'ov7670_registers' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_controller.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_controller.vhd:18]
+INFO: [Synth 8-3491] module 'frame_buffer' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/.Xil/Vivado-32124-PC-Sten/realtime/frame_buffer_stub.v:5' bound to instance 'Inst_frame_buffer' of component 'frame_buffer' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:222]
+INFO: [Synth 8-6157] synthesizing module 'frame_buffer' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/.Xil/Vivado-32124-PC-Sten/realtime/frame_buffer_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'frame_buffer' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/.Xil/Vivado-32124-PC-Sten/realtime/frame_buffer_stub.v:5]
+INFO: [Synth 8-3491] module 'ov7670_capture' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_capture.vhd:6' bound to instance 'Inst_ov7670_capture' of component 'ov7670_capture' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:232]
+INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_capture.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/ov7670_capture.vhd:18]
 INFO: [Synth 8-3491] module 'RGB' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:7' bound to instance 'Inst_RGB' of component 'RGB' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:244]
 INFO: [Synth 8-638] synthesizing module 'RGB' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:20]
 INFO: [Synth 8-3491] module 'video_compression' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/Inst_video_compression.vhd:6' bound to instance 'Inst_video_compression' of component 'video_compression' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:67]
@@ -82,7 +84,7 @@ INFO: [Synth 8-638] synthesizing module 'filter_b_and_w' [D:/____School/AP/2023-
 INFO: [Synth 8-256] done synthesizing module 'filter_b_and_w' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_b_and_w.vhd:14]
 INFO: [Synth 8-3491] module 'filter_colourless' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:7' bound to instance 'Inst_filter_colourless' of component 'filter_colourless' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:86]
 INFO: [Synth 8-638] synthesizing module 'filter_colourless' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:14]
-WARNING: [Synth 8-614] signal 'lut' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:19]
+WARNING: [Synth 8-614] signal 'lut' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:20]
 INFO: [Synth 8-256] done synthesizing module 'filter_colourless' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/filter_colourless.vhd:14]
 INFO: [Synth 8-3491] module 'filter_brightness' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/Inst_filter_brightness.vhd:5' bound to instance 'Inst_brightness_filter' of component 'filter_brightness' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:93]
 INFO: [Synth 8-638] synthesizing module 'filter_brightness' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/Inst_filter_brightness.vhd:13]
@@ -107,9 +109,9 @@ WARNING: [Synth 8-614] signal 'R_colourless' is read in the process but is not i
 WARNING: [Synth 8-614] signal 'G_colourless' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:99]
 WARNING: [Synth 8-614] signal 'B_colourless' is read in the process but is not in the sensitivity list [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:99]
 INFO: [Synth 8-256] done synthesizing module 'RGB' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:20]
-INFO: [Synth 8-3491] module 'Address_Generator' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/address_Generator.vhd:8' bound to instance 'Inst_Address_Generator' of component 'Address_Generator' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:257]
-INFO: [Synth 8-638] synthesizing module 'Address_Generator' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/address_Generator.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/address_Generator.vhd:16]
+INFO: [Synth 8-3491] module 'Address_Generator' declared at 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/address_Generator.vhd:7' bound to instance 'Inst_Address_Generator' of component 'Address_Generator' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:257]
+INFO: [Synth 8-638] synthesizing module 'Address_Generator' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/address_Generator.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/address_Generator.vhd:15]
 INFO: [Synth 8-256] done synthesizing module 'top_level' (0#1) [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/top_level.vhd:36]
 WARNING: [Synth 8-3936] Found unconnected internal register 'Temp_B_reg' and it is trimmed from '8' to '4' bits. [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/Inst_filter_brightness.vhd:24]
 WARNING: [Synth 8-3936] Found unconnected internal register 'Temp_G_reg' and it is trimmed from '8' to '4' bits. [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/Inst_filter_brightness.vhd:23]
@@ -119,58 +121,69 @@ WARNING: [Synth 8-7129] Port BrightnessLevel[6] in module filter_brightness is e
 WARNING: [Synth 8-7129] Port BrightnessLevel[5] in module filter_brightness is either unconnected or has no load
 WARNING: [Synth 8-7129] Port BrightnessLevel[4] in module filter_brightness is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1272.055 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1272.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1272.055 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1272.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1272.055 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1272.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1272.055 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
-WARNING: [Netlist 29-432] The IBUFG primitive 'Inst_clocking/clkin1_buf' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1272.020 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/.Xil/Vivado-57420-PC-Sten/frame_buffer/frame_buffer/frame_buffer_in_context.xdc] for cell 'Inst_frame_buffer'
-Finished Parsing XDC File [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/.Xil/Vivado-57420-PC-Sten/frame_buffer/frame_buffer/frame_buffer_in_context.xdc] for cell 'Inst_frame_buffer'
+Parsing XDC File [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/.Xil/Vivado-32124-PC-Sten/frame_buffer/frame_buffer/frame_buffer_in_context.xdc] for cell 'Inst_frame_buffer'
+Finished Parsing XDC File [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/.Xil/Vivado-32124-PC-Sten/frame_buffer/frame_buffer/frame_buffer_in_context.xdc] for cell 'Inst_frame_buffer'
+Parsing XDC File [d:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'Inst_clocks/inst'
+Finished Parsing XDC File [d:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'Inst_clocks/inst'
+Parsing XDC File [d:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'Inst_clocks/inst'
+Finished Parsing XDC File [d:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'Inst_clocks/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
 Parsing XDC File [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/constrs_1/imports/new/basys3_xdc.xdc]
 WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/constrs_1/imports/new/basys3_xdc.xdc:99]
 Finished Parsing XDC File [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/constrs_1/imports/new/basys3_xdc.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/constrs_1/imports/new/basys3_xdc.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_level_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/constrs_1/imports/new/basys3_xdc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1336.848 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1332.047 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1 instances were transformed.
-  IBUFG => IBUF: 1 instance 
+No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1336.848 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1332.047 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1336.848 ; gain = 64.793
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1332.047 ; gain = 60.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1336.848 ; gain = 64.793
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1332.047 ; gain = 60.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for Inst_clocks/inst. (constraint file  {D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/dont_touch.xdc}, line 10).
+Applied set_property KEEP_HIERARCHY = SOFT for Inst_clocks. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Inst_frame_buffer. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1336.848 ; gain = 64.793
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1332.047 ; gain = 60.027
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6040] Register address_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 INFO: [Synth 8-802] inferred FSM for state register 'line_reg' in module 'ov7670_capture'
@@ -186,7 +199,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'line_reg' in module 'ov7670
 INFO: [Synth 8-3354] encoded FSM with state register 'line_reg' using encoding 'one-hot' in module 'ov7670_capture'
 WARNING: [Synth 8-327] inferring latch for variable 'Dout_reg' [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/imports/ov7670_fr/RGB.vhd:73]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1336.848 ; gain = 64.793
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1332.047 ; gain = 60.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -239,7 +252,7 @@ WARNING: [Synth 8-6040] Register Inst_ov7670_controller/Inst_ov7670_registers/ad
 WARNING: [Synth 8-3917] design top_level has port ov7670_pwdn driven by constant 0
 WARNING: [Synth 8-3917] design top_level has port ov7670_reset driven by constant 1
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1336.848 ; gain = 64.793
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1332.047 ; gain = 60.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -261,20 +274,20 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1336.848 ; gain = 64.793
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1332.047 ; gain = 60.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1336.848 ; gain = 64.793
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1332.047 ; gain = 60.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-7052] The timing for the instance Inst_ov7670_controller/Inst_ov7670_registers/sreg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1336.848 ; gain = 64.793
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1332.047 ; gain = 60.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -292,37 +305,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1336.848 ; gain = 64.793
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1332.047 ; gain = 60.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1336.848 ; gain = 64.793
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1332.047 ; gain = 60.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1336.848 ; gain = 64.793
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1332.047 ; gain = 60.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1336.848 ; gain = 64.793
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1332.047 ; gain = 60.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1336.848 ; gain = 64.793
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1332.047 ; gain = 60.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1336.848 ; gain = 64.793
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1332.047 ; gain = 60.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -353,35 +366,32 @@ Report Cell Usage:
 |12    |FDRE         |   204|
 |13    |FDSE         |     2|
 |14    |LD           |    12|
-|15    |IBUF         |    19|
-|16    |IBUFG        |     1|
-|17    |OBUF         |    19|
-|18    |OBUFT        |     1|
+|15    |IBUF         |    20|
+|16    |OBUF         |    19|
+|17    |OBUFT        |     1|
 +------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1336.848 ; gain = 64.793
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1332.047 ; gain = 60.027
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1336.848 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1336.848 ; gain = 64.793
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1332.047 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1332.047 ; gain = 60.027
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1336.848 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
-WARNING: [Netlist 29-432] The IBUFG primitive 'Inst_clocking/clkin1_buf' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1332.047 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1336.848 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1332.047 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 13 instances were transformed.
-  IBUFG => IBUF: 1 instance 
+  A total of 12 instances were transformed.
   LD => LDCE: 12 instances
 
-Synth Design complete, checksum: 4321dc1c
+Synth Design complete, checksum: 344e0d4a
 INFO: [Common 17-83] Releasing license: Synthesis
-73 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
+79 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1336.848 ; gain = 64.793
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1332.047 ; gain = 60.027
 INFO: [Common 17-1381] The checkpoint 'D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/top_level.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_level_utilization_synth.rpt -pb top_level_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Jan 20 15:50:28 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 21 22:44:05 2024...

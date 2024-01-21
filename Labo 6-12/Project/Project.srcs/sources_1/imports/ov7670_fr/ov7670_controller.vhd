@@ -1,12 +1,7 @@
-----------------------------------------------------------------------------------
--- Engineer: Mike Field <hamster@snap.net.nz>
--- 
--- Description: Controller for the OV760 camera - transferes registers to the 
---              camera over an I2C like bus
-----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+
 
 entity ov7670_controller is
     Port ( clk   : in    STD_LOGIC;
@@ -50,7 +45,7 @@ architecture Behavioral of ov7670_controller is
 	signal taken    : std_logic := '0';
 	signal send     : std_logic;
 
-	constant camera_address : std_logic_vector(7 downto 0) := x"42"; -- 42"; -- Device write ID - see top of page 11 of data sheet
+	constant camera_address : std_logic_vector(7 downto 0) := x"42";
 begin
    config_finished <= finished;
 	

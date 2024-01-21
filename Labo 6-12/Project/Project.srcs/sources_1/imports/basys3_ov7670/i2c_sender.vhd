@@ -1,12 +1,7 @@
-----------------------------------------------------------------------------------
--- Engineer: <mfield@concepts.co.nz
--- 
--- Description: Send the commands to the OV7670 over an I2C-like interface
---
-----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+
 
 entity i2c_sender is
     Port ( clk   : in  STD_LOGIC;	 

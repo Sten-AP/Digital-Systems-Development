@@ -12,6 +12,7 @@ entity filter_colourless is
 end filter_colourless;
 
 architecture Behavioral of filter_colourless is
+    -- Colour lookup-table
     type lut_type is array (0 to 6138) of std_logic_vector(3 downto 0);
     signal lut : lut_type := (others => "0000");
 begin

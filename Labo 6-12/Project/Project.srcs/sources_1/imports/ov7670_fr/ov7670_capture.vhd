@@ -1,18 +1,7 @@
-----------------------------------------------------------------------------------
--- Engineer: Mike Field <hamster@snap.net.nz>
--- 
--- Description: Captures the pixels coming from the OV7670 camera and 
---              Stores them in block RAM
---
--- The length of href last controls how often pixels are captive - (2 downto 0) stores
--- one pixel every 4 cycles.
---
--- "line" is used to control how often data is captured. In this case every forth 
--- line
-----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+
 
 entity ov7670_capture is
     Port ( pclk  : in   STD_LOGIC;
@@ -39,7 +28,7 @@ architecture Behavioral of ov7670_capture is
 begin
    addr <= address;
    we <= we_reg;
-   dout    <= d_latch(15 downto 12) & d_latch(10 downto 7) & d_latch(4 downto 1); 
+   dout <= d_latch(15 downto 12) & d_latch(10 downto 7) & d_latch(4 downto 1); 
    
 capture_process: process(pclk)
    begin

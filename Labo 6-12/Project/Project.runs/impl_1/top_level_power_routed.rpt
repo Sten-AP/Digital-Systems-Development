@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date             : Sat Jan 20 15:51:33 2024
+| Date             : Sun Jan 21 22:45:11 2024
 | Host             : PC-Sten running 64-bit major release  (build 9200)
 | Command          : report_power -file top_level_power_routed.rpt -pb top_level_power_summary_routed.pb -rpx top_level_power_routed.rpx
 | Design           : top_level
@@ -52,14 +52,14 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |      929 |       --- |             --- |
+| Clocks         |     0.001 |       10 |       --- |             --- |
+| Slice Logic    |    <0.001 |      930 |       --- |             --- |
 |   LUT as Logic |    <0.001 |      388 |     20800 |            1.87 |
 |   CARRY4       |    <0.001 |       21 |      8150 |            0.26 |
 |   Register     |    <0.001 |      233 |     41600 |            0.56 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   F7/F8 Muxes  |    <0.001 |       36 |     32600 |            0.11 |
-|   Others       |     0.000 |      140 |       --- |             --- |
+|   Others       |     0.000 |      141 |       --- |             --- |
 | Signals        |     0.001 |      936 |       --- |             --- |
 | Block RAM      |     0.003 |     44.5 |        50 |           89.00 |
 | MMCM           |     0.106 |        1 |         5 |           20.00 |
@@ -128,14 +128,18 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-------------+------------------------+-----------------+
-| Clock       | Domain                 | Constraint (ns) |
-+-------------+------------------------+-----------------+
-| clkfbout    | Inst_clocking/clkfbout |            10.0 |
-| clkout0     | Inst_clocking/clkout0  |            20.0 |
-| clkout1     | Inst_clocking/clkout1  |            40.0 |
-| sys_clk_pin | clk100                 |            10.0 |
-+-------------+------------------------+-----------------+
++------------------------+---------------------------------------+-----------------+
+| Clock                  | Domain                                | Constraint (ns) |
++------------------------+---------------------------------------+-----------------+
+| clk100                 | clk100                                |            10.0 |
+| clk_out_25_clk_wiz_0   | Inst_clocks/inst/clk_out_25_clk_wiz_0 |            40.0 |
+| clk_out_25_clk_wiz_0_1 | Inst_clocks/inst/clk_out_25_clk_wiz_0 |            40.0 |
+| clk_out_50_clk_wiz_0   | Inst_clocks/inst/clk_out_50_clk_wiz_0 |            20.0 |
+| clk_out_50_clk_wiz_0_1 | Inst_clocks/inst/clk_out_50_clk_wiz_0 |            20.0 |
+| clkfbout_clk_wiz_0     | Inst_clocks/inst/clkfbout_clk_wiz_0   |            10.0 |
+| clkfbout_clk_wiz_0_1   | Inst_clocks/inst/clkfbout_clk_wiz_0   |            10.0 |
+| sys_clk_pin            | clk100                                |            10.0 |
++------------------------+---------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -148,7 +152,8 @@ Table of Contents
 | Name                   | Power (W) |
 +------------------------+-----------+
 | top_level              |     0.117 |
-|   Inst_clocking        |     0.106 |
+|   Inst_clocks          |     0.106 |
+|     inst               |     0.106 |
 |   Inst_frame_buffer    |     0.003 |
 |     U0                 |     0.003 |
 |       inst_blk_mem_gen |     0.003 |
