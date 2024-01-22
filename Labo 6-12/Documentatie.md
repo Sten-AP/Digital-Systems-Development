@@ -25,8 +25,10 @@ Hulsbergen Sten  - 3ITIOT
 &emsp;[7.1 Code](###-71-Code)</br>
 &emsp;[7.2 Resultaat](###-72-Resultaat)</br>
 &emsp;[7.3 Oplossing](###-73-Oplossing)</br>
-[8. Datasheets](##-8-Datasheets)</br>
-[9. Bronnen](##-9-Bronnen)
+[8. RTL analyse schema](##-8-RTL-analyse-schema)</br>
+[9. Implementatie schema](##-9-Implementatie-schema)</br>
+[10. Datasheets](##-10-Datasheets)</br>
+[11. Bronnen](##-11-Bronnen)
 
 ## 1. Doel
 
@@ -410,11 +412,11 @@ Dit component neemt nu alleen RGB-data van 1 pixel, hierbij moet ik toevoegen da
     <img src="Afbeeldingen/IMP-schema.jpg" alt="IMP-schema">
 </p>
 
-## 9. Datasheets
+## 10. Datasheets
 
 [OV7670 Camera](https://www.voti.nl/docs/OV7670.pdf)
 
-## 10. Bronnen
+## 11. Bronnen
 
 [FPGA4Student: videobeelden via VGA](https://www.fpga4student.com/2018/08/basys-3-fpga-ov7670-camera.html)</br>
 [Startingelectronics: inverteerde kleuren filter](https://startingelectronics.com/software/VHDL-CPLD-course/tut1-inverter-buffer/)</br>
