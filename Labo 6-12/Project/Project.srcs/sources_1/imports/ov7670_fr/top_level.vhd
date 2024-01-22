@@ -2,18 +2,24 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity top_level is
-    Port ( clk100          : in  STD_LOGIC;
+    Port ( 
+         -- Clock input
+         clk100          : in  STD_LOGIC;
+         
+         -- Button inputs
          btnl            : in  STD_LOGIC;
          btnc            : in  STD_LOGIC;
          btnr            : in  STD_LOGIC;
          config_finished : out STD_LOGIC;
 
+         -- VGA output
          vga_hsync : out  STD_LOGIC;
          vga_vsync : out  STD_LOGIC;
          vga_r     : out  STD_LOGIC_vector(3 downto 0);
          vga_g     : out  STD_LOGIC_vector(3 downto 0);
          vga_b     : out  STD_LOGIC_vector(3 downto 0);
 
+         -- Camera in- & outputs
          ov7670_pclk  : in  STD_LOGIC;
          ov7670_xclk  : out STD_LOGIC;
          ov7670_vsync : in  STD_LOGIC;
@@ -24,17 +30,18 @@ entity top_level is
          ov7670_pwdn  : out STD_LOGIC;
          ov7670_reset : out STD_LOGIC;
 
+         -- Switch inputs
          filter_switch_inverted : in STD_LOGIC;
          filter_switch_b_and_w : in STD_LOGIC;
          filter_switch_colourless: in STD_LOGIC;
          filter_switch_brightness: in std_logic;
-
          compression_switch : in STD_LOGIC
         );
 end top_level;
 
 architecture Behavioral of top_level is
 
+    -- VGA component
     COMPONENT VGA
         PORT(
             CLK25 : IN std_logic;
@@ -49,6 +56,7 @@ architecture Behavioral of top_level is
         );
     END COMPONENT;
 
+    -- Camera controller
     COMPONENT ov7670_controller
         PORT(
             clk : IN std_logic;
@@ -62,6 +70,7 @@ architecture Behavioral of top_level is
         );
     END COMPONENT;
 
+    -- Debounce component
     COMPONENT debounce
         PORT(
             clk : IN std_logic;
@@ -70,6 +79,7 @@ architecture Behavioral of top_level is
         );
     END COMPONENT;
 
+    -- Frame buffer component
     COMPONENT frame_buffer
         PORT (
             clka : IN STD_LOGIC;
@@ -82,6 +92,7 @@ architecture Behavioral of top_level is
         );
     END COMPONENT;
 
+    -- Camera capture component
     COMPONENT ov7670_capture
         PORT(
             rez_160x120 : IN std_logic;
@@ -96,6 +107,7 @@ architecture Behavioral of top_level is
         );
     END COMPONENT;
 
+    -- RGB calculation component
     COMPONENT RGB
         PORT(
             Din : IN std_logic_vector(11 downto 0);
@@ -111,6 +123,7 @@ architecture Behavioral of top_level is
         );
     END COMPONENT;
 
+    -- Clock wizard component
     component clk_wiz_0
         port (
             clk_in_100 : in std_logic;
@@ -118,14 +131,7 @@ architecture Behavioral of top_level is
             clk_out_50 : out std_logic);
     end component;
 
-    COMPONENT vga_pll
-        PORT(
-            inclk0 : IN std_logic;
-            c0 : OUT std_logic;
-            c1 : OUT std_logic
-        );
-    END COMPONENT;
-
+    -- Address generator component
     COMPONENT Address_Generator
         PORT(
             CLK25       : IN  std_logic;
@@ -137,6 +143,7 @@ architecture Behavioral of top_level is
         );
     END COMPONENT;
 
+    -- Variables
     signal clk_camera : std_logic;
     signal clk_vga    : std_logic;
     signal wren       : std_logic_vector(0 downto 0);
@@ -166,9 +173,9 @@ begin
     vga_b <= blue(3 downto 0);
     vga_vsync <= vsync;
 
+    -- Windowsize selection
     rez_160x120 <= btnl;
     rez_320x240 <= btnr;
-
     size_select <= btnl&btnr;
 
     with size_select select
@@ -182,6 +189,7 @@ begin
         wraddress(16 downto 0) when "10",
         wraddress(16 downto 0) when "11";
 
+    -- Clocks
     Inst_clocks : clk_wiz_0
         port map (
             clk_in_100 => CLK100,
@@ -189,6 +197,7 @@ begin
             clk_out_25 => CLK_vga
         );
 
+    -- VGA
     Inst_VGA: VGA PORT MAP(
             CLK25      => clk_vga,
             rez_160x120 => rez_160x120,
@@ -201,12 +210,14 @@ begin
             activeArea => activeArea
         );
 
+    -- Debounce
     Inst_debounce: debounce PORT MAP(
             clk => clk_vga,
             i   => btnc,
             o   => resend
         );
 
+    -- Camera controller
     Inst_ov7670_controller: ov7670_controller PORT MAP(
             clk             => clk_camera,
             resend          => resend,
@@ -218,7 +229,7 @@ begin
             xclk            => ov7670_xclk
         );
 
-
+    -- Frame buffer
     Inst_frame_buffer: frame_buffer PORT MAP(
             addrb => rd_addr,
             clkb => clk_vga,
@@ -229,6 +240,7 @@ begin
             wea => wren
         );
 
+    -- Camera capture
     Inst_ov7670_capture: ov7670_capture PORT MAP(
             pclk  => ov7670_pclk,
             rez_160x120 => rez_160x120,
@@ -241,6 +253,7 @@ begin
             we    => wren(0)
         );
 
+    -- RGB calculation
     Inst_RGB: RGB PORT MAP(
             Din => rddata,
             Nblank => activeArea,
@@ -254,6 +267,7 @@ begin
             filter_switch_brightness => filter_switch_brightness
         );
 
+    -- Address generator
     Inst_Address_Generator: Address_Generator PORT MAP(
             CLK25 => clk_vga,
             rez_160x120 => rez_160x120,

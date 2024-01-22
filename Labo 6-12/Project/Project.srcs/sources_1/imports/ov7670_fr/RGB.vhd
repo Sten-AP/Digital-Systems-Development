@@ -18,6 +18,7 @@ entity RGB is
 end RGB;
 
 architecture Behavioral of RGB is
+    -- Variables
     signal Dout : STD_LOGIC_VECTOR (11 downto 0);
     signal Dout_compressed : STD_LOGIC_VECTOR (11 downto 0);
     signal Dout_brightened : STD_LOGIC_VECTOR (11 downto 0);
@@ -26,6 +27,7 @@ architecture Behavioral of RGB is
     signal R_b_and_w, G_b_and_w, B_b_and_w : STD_LOGIC_VECTOR (3 downto 0);
     signal R_colourless, G_colourless, B_colourless : STD_LOGIC_VECTOR (3 downto 0);
 
+    -- Video compression component
     COMPONENT video_compression
         PORT (
             comp_in   : in STD_LOGIC_VECTOR (11 downto 0);
@@ -33,6 +35,7 @@ architecture Behavioral of RGB is
         );
     END COMPONENT;
 
+    -- Video brightness component
     COMPONENT filter_brightness
         PORT (
             Din      : in STD_LOGIC_VECTOR (11 downto 0);
@@ -40,7 +43,8 @@ architecture Behavioral of RGB is
             BrightnessLevel: in integer range 0 to 255
         );
     END COMPONENT;
-
+    
+    -- Video invert component
     COMPONENT filter_inverted
         PORT(
             Din : in STD_LOGIC_VECTOR (11 downto 0);
@@ -48,6 +52,7 @@ architecture Behavioral of RGB is
         );
     END COMPONENT;
 
+    -- Video black and white component
     COMPONENT filter_b_and_w
         PORT(
             Din : in STD_LOGIC_VECTOR (11 downto 0);
@@ -55,6 +60,7 @@ architecture Behavioral of RGB is
         );
     END COMPONENT;
 
+    -- Video colourless component
     COMPONENT filter_colourless
         PORT(
             Din : in STD_LOGIC_VECTOR (11 downto 0);
@@ -63,33 +69,37 @@ architecture Behavioral of RGB is
     END COMPONENT;
 
 begin
-
+    -- Video compression
     Inst_video_compression: video_compression  PORT MAP(
             comp_in => Din,
             comp_out => Dout_compressed
         );
-
+        
+    -- Video inverted
     Inst_filter_inverted: filter_inverted PORT MAP(
             Din => Dout,
             R_inverted => R_inverted,
             G_inverted => G_inverted,
             B_inverted => B_inverted
         );
-
+        
+    -- Video black and white
     Inst_filter_b_and_w: filter_b_and_w PORT MAP(
             Din => Dout,
             R_b_and_w => R_b_and_w,
             G_b_and_w => G_b_and_w,
             B_b_and_w => B_b_and_w
         );
-
+        
+    -- Video colourless component
     Inst_filter_colourless: filter_colourless PORT MAP(
             Din => Dout,
             R_colourless => R_colourless,
             G_colourless => G_colourless,
             B_colourless => B_colourless
         );
-
+        
+    -- Video brightness
     Inst_brightness_filter: filter_brightness PORT MAP(
         Din => Dout,
         Dout => Dout_brightened,

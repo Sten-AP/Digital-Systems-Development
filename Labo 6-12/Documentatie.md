@@ -60,11 +60,13 @@ Het doel van dit project is het opnemen van live videobeelden en deze weergeven 
 
 Voor de code van de camera heb ik gebruik gemaakt van de bron *FPGA4Students*, deze heb ik gedownload en verder ingesteld naar de instellingen die nodig zijn bij dit project.
 
+De onderdelen die de camera gebruikt zijn een controller, waarin een i2c communicatie is en een link aan registers. Daarnaast is er een component dat de beelden opneemt om later te kunnen verwerken.
+
 ## 5. VGA
 
 Voor de code om de VGA aan te sturen heb ik ook gebruik gemaakt van de bron *FPGA4Students*, maar deze is een groot deel aangepast om te kunnen werken met de nodige filters.
 
-Zoals in de onderstaande afbeelding te zien is, worden de pinnen aangestuurd. De rood, groen en blauwe waarden worden in 4 bits verstuurd vanuit de FPGA. De H-sync en V-sync dienen voor horizontaal en verticaal te synchroniseren.
+Zoals in de onderstaande afbeelding te zien is, worden de pinnen aangestuurd. De rood, groen en blauwe waarden worden in 4 bits verstuurd vanuit de FPGA. De H-sync en V-sync dienen voor horizontaal en verticaal 1 voor 1 pixels aan te duiden.
 
 <p align="center">
     <img src="Afbeeldingen/VGA.ppm" alt="VGA" height="400px">
@@ -220,7 +222,7 @@ end Behavioral;
 
 ### 6.1 Geinverteerd
 
-De kleuren inverteren is niet moeilijk, hierbij moest alleen `not` geplaatst worden voor de kleuren om te draaien. Hierbij heb ik extra lijnen geplaatst waarbij de kleuren geschaald worden naar 255. Deze waarden worden vervolgens geplaatst op de RGB-lijnen van de VGA.
+De kleuren inverteren is niet moeilijk, hierbij moest alleen `not` geplaatst worden voor de kleuren om te draaien. Deze waarden worden vervolgens geplaatst op de RGB-lijnen van de VGA.
 
 #### 6.1.1 Code
 
@@ -232,33 +234,22 @@ use ieee.numeric_std.all;
 
 
 entity filter_inverted is
-    Port ( 
-    		switch : in STD_LOGIC;
-            Din : in STD_LOGIC_VECTOR (11 downto 0);
-		    Nblank : in	STD_LOGIC;
-            R_inverted, G_inverted, B_inverted : out STD_LOGIC_VECTOR (7 downto 0)
-          );
+    Port (
+        Din 	: in	STD_LOGIC_VECTOR (11 downto 0);
+        R_inverted, G_inverted, B_inverted : out STD_LOGIC_VECTOR (3 downto 0)
+    );
 end filter_inverted;
 
 architecture Behavioral of filter_inverted is
 begin
 
-filters: process(Din, Nblank)
-begin
-    if Nblank = '1' then
-        if switch = '1' then
-            -- Geinverteerde video
---            R_inverted <= not Din(11 downto 8) & Din(11 downto 8);
---            G_inverted <= not Din(7 downto 4)  & Din(7 downto 4);
---            B_inverted <= not Din(3 downto 0)  & Din(3 downto 0);
-            
-            -- Geinverteerde video met aangepaste schalingsfactor voor een meer gebalanceerde kleurweergave
-            R_inverted <= not std_logic_vector(resize(to_signed(to_integer(unsigned(Din(11 downto 8))) * 17, 8), 8));
-            G_inverted <= not std_logic_vector(resize(to_signed(to_integer(unsigned(Din(7 downto 4))) * 17, 8), 8));
-            B_inverted <= not std_logic_vector(resize(to_signed(to_integer(unsigned(Din(3 downto 0))) * 17, 8), 8));
-        end if;
-    end if;
-end process;
+    filters: process(Din)
+    begin
+        -- Inverted video
+        R_inverted <= not Din(11 downto 8);
+        G_inverted <= not Din(7 downto 4);
+        B_inverted <= not Din(3 downto 0);
+    end process;
 end Behavioral;
 ```
 
@@ -270,7 +261,7 @@ end Behavioral;
 
 ### 6.2 Zwart en wit
 
-Dit is wat moeilijker, met een korte berekening kom je uit op alleen wit en zwart waardes, waardoor deze alleen overblijven. Deze waarden worden vervolgens geplaatst op de RGB-lijnen van de VGA.
+Dit is wat moeilijker, met een korte berekening kom je uit op alleen wit en zwart waardes, waardoor deze alleen overblijven. Wat hier gebeurd is een berekening van de pixelwaarde, deze wordt dan omgezet naar 4 bits. Deze waarden worden vervolgens geplaatst op de RGB-lijnen van de VGA.
 
 #### 6.2.1 Code
 
@@ -316,7 +307,7 @@ end Behavioral;
 
 ### 6.3 Kleurloos
 
-Om de kleuren weg te laten en gebruik te maken van grijswaardes was het moeilijkst. Hierbij heb ik grondig gebruik gemaakt van bepaalde bronnen. Deze waarden worden vervolgens geplaatst op de RGB-lijnen van de VGA.
+Om de kleuren weg te laten en gebruik te maken van grijswaardes was het moeilijkst. Hierbij heb ik grondig gebruik gemaakt van bepaalde bronnen. Er is een lookup-table voorzien waaruit, met een geschaalde waarden, een grijswaarde wordt gekozen. Deze waarden worden vervolgens geplaatst op de RGB-lijnen van de VGA.
 
 #### 6.3.1 Code
 
@@ -363,7 +354,7 @@ end Behavioral;
 
 ## 7. Compressie
 
-Dit is het moeilijkste onderdeel van dit project. Veel opzoekwerk komt veel uit op betaalde IP-blocks wat natuurlijk niet goed is. Informatie over het zelf maken van een compressieblock is ook zeer gering, dit onderdeel gaat net wel of net niet klaar zijn. Hierbij heb ik geprobeerd zelf in VHDL een component te maken.
+Dit is het moeilijkste onderdeel van dit project. Veel opzoekwerk komt veel uit op betaalde IP-blocks wat natuurlijk niet goed is. Informatie over het zelf maken van een compressieblock is ook zeer gering, dit onderdeel gaat net wel of net niet klaar zijn. Hierbij heb ik geprobeerd zelf in VHDL een component te maken. Wat ik probeer te doen is de kleurwaardes samen te voegen van 2 opeenvolgende pixels en daar het gemiddelde van te nemen. De code is niet volledig correct, maar er is een uitleg over een potentiele oplossing voorzien.
 
 ### 7.1 Code
 

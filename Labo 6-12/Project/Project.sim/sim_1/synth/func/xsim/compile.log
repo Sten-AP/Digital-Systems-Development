@@ -1,12 +1,11 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.sim/sim_1/synth/func/xsim/top_level_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sten/Desktop/Digital-Systems-Development/Labo 6-12/Project/Project.sim/sim_1/synth/func/xsim/top_level_func_synth.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Address_Generator
 INFO: [VRFC 10-311] analyzing module RGB
 INFO: [VRFC 10-311] analyzing module VGA
-INFO: [VRFC 10-311] analyzing module clocking
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
 INFO: [VRFC 10-311] analyzing module debounce
-INFO: [VRFC 10-311] analyzing module filter_b_and_w
 INFO: [VRFC 10-311] analyzing module filter_colourless
-INFO: [VRFC 10-311] analyzing module filter_inverted
 INFO: [VRFC 10-311] analyzing module frame_buffer
 INFO: [VRFC 10-311] analyzing module i2c_sender
 INFO: [VRFC 10-311] analyzing module ov7670_capture
