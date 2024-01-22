@@ -93,7 +93,7 @@ begin
     Inst_brightness_filter: filter_brightness PORT MAP(
         Din => Dout,
         Dout => Dout_brightened,
-        BrightnessLevel => 50
+        BrightnessLevel => 20
     );
 
     filters: process(filter_switch_inverted, filter_switch_b_and_w, filter_switch_colourless, Dout, Dout_compressed, Din)

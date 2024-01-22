@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/impl_1/top_level.tcl"
+  variable script "/home/sten/Desktop/Digital-Systems-Development/Labo 6-12/Project/Project.runs/impl_1/top_level.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,8 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {Synth 8-9493}  -string {{ERROR: [Synth 8-9493] found '0' definitions of operator "*", cannot determine exact overloaded matching definition for "*" [D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/new/Inst_video_compression.vhd:54]}}  -suppress 
 
 OPTRACE "impl_1" START { ROLLUP_1 }
@@ -125,28 +123,25 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param checkpoint.writeSynthRtdsInDcp 1
-  set_param chipscope.maxJobs 3
-  set_param synth.incrementalSynthesisCache C:/Users/stenh/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-30616-PC-Sten/incrSyn
-  set_param xicom.use_bs_reader 1
+  set_param chipscope.maxJobs 2
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tcpg236-3
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir {D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.cache/wt} [current_project]
-  set_property parent.project_path {D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.xpr} [current_project]
-  set_property ip_output_repo {{D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.cache/ip}} [current_project]
+  set_property webtalk.parent_dir {/home/sten/Desktop/Digital-Systems-Development/Labo 6-12/Project/Project.cache/wt} [current_project]
+  set_property parent.project_path {/home/sten/Desktop/Digital-Systems-Development/Labo 6-12/Project/Project.xpr} [current_project]
+  set_property ip_output_repo {{/home/sten/Desktop/Digital-Systems-Development/Labo 6-12/Project/Project.cache/ip}} [current_project]
   set_property ip_cache_permissions disable [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet {{D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/top_level.dcp}}
-  read_ip -quiet {{d:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
-  read_ip -quiet {{D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/ip/frame_buffer/frame_buffer.xci}}
+  add_files -quiet {{/home/sten/Desktop/Digital-Systems-Development/Labo 6-12/Project/Project.runs/synth_1/top_level.dcp}}
+  read_ip -quiet {{/home/sten/Desktop/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
+  read_ip -quiet {{/home/sten/Desktop/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/ip/frame_buffer/frame_buffer.xci}}
 OPTRACE "read constraints: implementation" START { }
-  read_xdc {{D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/constrs_1/imports/new/basys3_xdc.xdc}}
+  read_xdc {{/home/sten/Desktop/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/constrs_1/imports/new/basys3_xdc.xdc}}
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

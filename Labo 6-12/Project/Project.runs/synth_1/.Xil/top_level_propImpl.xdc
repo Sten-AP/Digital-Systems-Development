@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:{d:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc} rfile:../../../Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc id:1 order:EARLY scoped_inst:Inst_clocks/inst} [current_design]
-set_property SRC_FILE_INFO {cfile:{D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/constrs_1/imports/new/basys3_xdc.xdc} rfile:../../../Project.srcs/constrs_1/imports/new/basys3_xdc.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:{/home/sten/Desktop/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc} rfile:../../../Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc id:1 order:EARLY scoped_inst:Inst_clocks/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:{/home/sten/Desktop/Digital-Systems-Development/Labo 6-12/Project/Project.srcs/constrs_1/imports/new/basys3_xdc.xdc} rfile:../../../Project.srcs/constrs_1/imports/new/basys3_xdc.xdc id:2} [current_design]
 current_instance Inst_clocks/inst
 set_property src_info {type:SCOPED_XDC file:1 line:57 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter [get_clocks -of_objects [get_ports clk_in_100]] 0.100

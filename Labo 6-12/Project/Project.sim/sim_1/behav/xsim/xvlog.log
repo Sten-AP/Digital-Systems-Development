@@ -1,4 +1,8 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.ip_user_files/ip/frame_buffer/sim/frame_buffer.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sten/Desktop/Digital-Systems-Development/Labo 6-12/Project/Project.ip_user_files/ip/frame_buffer/sim/frame_buffer.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module frame_buffer
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/____School/AP/2023-2024/Digital-Systems-Development/Labo 6-12/Project/Project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sten/Desktop/Digital-Systems-Development/Labo 6-12/Project/Project.ip_user_files/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sten/Desktop/Digital-Systems-Development/Labo 6-12/Project/Project.ip_user_files/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sten/Desktop/Digital-Systems-Development/Labo 6-12/Project/Project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl

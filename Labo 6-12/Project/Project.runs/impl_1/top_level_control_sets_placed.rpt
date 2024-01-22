@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Sun Jan 21 22:44:48 2024
-| Host         : PC-Sten running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Mon Jan 22 11:38:09 2024
+| Host         : PC-Sten-Linux running 64-bit Ubuntu 22.04.3 LTS
 | Command      : report_control_sets -verbose -file top_level_control_sets_placed.rpt
 | Design       : top_level
 | Device       : xc7a35t
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              47 |           32 |
+| No           | No                    | No                     |              47 |           34 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              43 |           12 |
-| Yes          | No                    | No                     |              74 |           23 |
+| No           | Yes                   | No                     |              43 |           11 |
+| Yes          | No                    | No                     |              74 |           22 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              69 |           21 |
+| Yes          | Yes                   | No                     |              69 |           22 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,26 +73,26 @@ Table of Contents
 +------------------------------+-----------------------------------------------------------+------------------------------------------------------------+------------------+----------------+--------------+
 |         Clock Signal         |                       Enable Signal                       |                      Set/Reset Signal                      | Slice Load Count | Bel Load Count | Bels / Slice |
 +------------------------------+-----------------------------------------------------------+------------------------------------------------------------+------------------+----------------+--------------+
-|  Inst_clocks/inst/clk_out_25 |                                                           | Inst_VGA/Hsync0                                            |                1 |              1 |         1.00 |
 |  Inst_clocks/inst/clk_out_50 |                                                           | Inst_ov7670_controller/Inst_i2c_sender/sioc_i_1_n_0        |                1 |              1 |         1.00 |
-|  Inst_clocks/inst/clk_out_25 | Inst_VGA/eqOp                                             |                                                            |                2 |              2 |         1.00 |
+|  Inst_clocks/inst/clk_out_25 |                                                           | Inst_VGA/Hsync0                                            |                1 |              1 |         1.00 |
 |  ov7670_pclk_IBUF_BUFG       |                                                           |                                                            |                2 |              2 |         1.00 |
+|  Inst_clocks/inst/clk_out_25 | Inst_VGA/eqOp                                             |                                                            |                2 |              2 |         1.00 |
 |  ov7670_pclk_IBUF_BUFG       | Inst_ov7670_capture/line0                                 | Inst_ov7670_capture/latched_vsync                          |                1 |              4 |         4.00 |
-|  Inst_clocks/inst/clk_out_50 |                                                           |                                                            |                4 |              7 |         1.75 |
 |  ov7670_pclk_IBUF_BUFG       |                                                           | Inst_ov7670_capture/href_last[6]_i_1_n_0                   |                1 |              7 |         7.00 |
-|  Inst_clocks/inst/clk_out_25 | Inst_VGA/eqOp                                             | Inst_VGA/Vcnt                                              |                4 |              8 |         2.00 |
-|  Inst_clocks/inst/clk_out_50 | Inst_ov7670_controller/Inst_i2c_sender/divider[7]_i_1_n_0 |                                                            |                3 |              8 |         2.67 |
-|  Inst_clocks/inst/clk_out_50 | Inst_ov7670_controller/Inst_i2c_sender/taken              | Inst_debounce/o                                            |                3 |              8 |         2.67 |
-|  Inst_clocks/inst/clk_out_25 |                                                           | Inst_VGA/eqOp                                              |                3 |             10 |         3.33 |
-| ~ov7670_pclk_IBUF_BUFG       |                                                           |                                                            |                9 |             10 |         1.11 |
+|  Inst_clocks/inst/clk_out_50 |                                                           |                                                            |                5 |              7 |         1.40 |
+|  Inst_clocks/inst/clk_out_50 | Inst_ov7670_controller/Inst_i2c_sender/taken              | Inst_debounce/o                                            |                2 |              8 |         4.00 |
+|  Inst_clocks/inst/clk_out_50 | Inst_ov7670_controller/Inst_i2c_sender/divider[7]_i_1_n_0 |                                                            |                2 |              8 |         4.00 |
+|  Inst_clocks/inst/clk_out_25 | Inst_VGA/eqOp                                             | Inst_VGA/Vcnt                                              |                6 |              8 |         1.33 |
+|  Inst_clocks/inst/clk_out_25 |                                                           | Inst_VGA/eqOp                                              |                2 |             10 |         5.00 |
+| ~ov7670_pclk_IBUF_BUFG       |                                                           |                                                            |                8 |             10 |         1.25 |
 |  Inst_clocks/inst/clk_out_50 | Inst_ov7670_controller/Inst_i2c_sender/busy_sr0           | Inst_ov7670_controller/Inst_i2c_sender/data_sr[30]_i_1_n_0 |                3 |             11 |         3.67 |
 |  Inst_VGA/activeArea         |                                                           |                                                            |                6 |             12 |         2.00 |
-|  ov7670_pclk_IBUF_BUFG       | Inst_ov7670_capture/latched_href                          |                                                            |                8 |             15 |         1.88 |
-|  Inst_clocks/inst/clk_out_25 |                                                           |                                                            |               11 |             16 |         1.45 |
+|  ov7670_pclk_IBUF_BUFG       | Inst_ov7670_capture/latched_href                          |                                                            |                9 |             15 |         1.67 |
+|  Inst_clocks/inst/clk_out_25 |                                                           |                                                            |               13 |             16 |         1.23 |
 |  Inst_clocks/inst/clk_out_25 | Inst_Address_Generator/val[0]_i_2_n_0                     | Inst_VGA/Vsync_reg_0                                       |                5 |             19 |         3.80 |
 |  ov7670_pclk_IBUF_BUFG       | Inst_ov7670_capture/wren                                  | Inst_ov7670_capture/latched_vsync                          |                5 |             19 |         3.80 |
 |  Inst_clocks/inst/clk_out_25 |                                                           | Inst_debounce/clear                                        |                6 |             24 |         4.00 |
-|  Inst_clocks/inst/clk_out_50 | Inst_ov7670_controller/Inst_i2c_sender/busy_sr0           |                                                            |               10 |             49 |         4.90 |
+|  Inst_clocks/inst/clk_out_50 | Inst_ov7670_controller/Inst_i2c_sender/busy_sr0           |                                                            |                9 |             49 |         5.44 |
 +------------------------------+-----------------------------------------------------------+------------------------------------------------------------+------------------+----------------+--------------+
 
 
